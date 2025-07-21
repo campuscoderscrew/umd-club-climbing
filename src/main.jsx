@@ -3,9 +3,11 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import Background from './components/background.jsx'
+import Text from './components/text.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <Text/>
     <Background/>
   </StrictMode>,
 )
