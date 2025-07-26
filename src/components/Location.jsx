@@ -1,7 +1,7 @@
 import React from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-import iphoneFrame from "./assets/iphone15.png";
-import button from "./assets/Link.png"
+import iphoneFrame from "../assets/iphone15.png";
+import button from "../assets/Link.png"
 import "./Location.css"
 
 const apiKey = import.meta.env.VITE_KEY;
