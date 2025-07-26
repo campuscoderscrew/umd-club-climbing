@@ -54,16 +54,7 @@ const LandingPage = () => {
       </div>
 
       {/* Mission Container */}
-      <div className="mission-container">
-        <h3 className="mission-title">Our Mission</h3>
-        <h4 className="mission-subtitle">Climbing for All, Built with Purpose</h4>
-        <p className="mission-description">
-          We aim to grow the climbing community by<br />
-          offering fun experiences where members<br />
-          can stay active, connect with others, and build<br />
-          their skills.
-        </p>
-      </div>
+     
     </div>
   );
 };
