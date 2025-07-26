@@ -2,6 +2,7 @@ import './App.css';
 import LandingPage from './components/LandingPage';
 import Text from './components/Text';
 import Location from './components/Location';
+import JoinTheJourney from './components/JoinTheJourney';
 
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
         description="Open to everyone of varying skill level"
          marginTop="100px"
       />
-      
+      <Location></Location>
+      <JoinTheJourney></JoinTheJourney>
     </>
   );
 }
