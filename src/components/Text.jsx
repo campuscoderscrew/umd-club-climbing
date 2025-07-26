@@ -1,18 +1,13 @@
-import './Text.css'
+import './Text.css';
 
-const Text = () =>{
-    return(
-        <div classname = "header">
-        <h3 id = "highlight">Our Mission</h3>
-        
-        <h1>Climbing for all, Built with Purpose</h1>
-        <p>
-            We aim to grow the climbing community by offering fun experiences where members 
-            can stay active, connect with others, and build their skills
-
-        </p>
-        </div>
-    )
-}
+const Text = ({ highlight = "Our Mission", title, description }) => {
+  return (
+    <div className="text-container">
+      <h3 id="highlight">{highlight}</h3>
+      <h1>{title}</h1>
+      <p>{description}</p>
+    </div>
+  );
+};
 
 export default Text;
