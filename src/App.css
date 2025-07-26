@@ -1,167 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background-color: #141414;
 }
 
-.plus-jakarta-sans-1{
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
-.inter-1 {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
 }
 
 .card {
   padding: 2em;
 }
-
-.App{
-  display: flex;
-  flex-direction: column;
-}
-
-.logos{
-  display: flex;
-  flex-direction: row;
-  width: 37%; 
-  height: 28%;
-  justify-content: center;
-  margin: 0; 
-  padding: 0; 
-}
-
-.ellipse1{
-  position: absolute;
-  position-anchor: --des-anchor;
-  margin: 0; 
-  padding-top: 3.5%; 
-  padding-left: 3%;
-  width: 9.5%;
-  height: 9.5%;
-  left: anchor(left); 
-  anchor-name: --ellipse1-anchor;
-}
-.ellipse2{
-  position: absolute;
-  position-anchor: --logo2-anchor;
-  margin: 0; 
-  padding-top: 3.5%; 
-  padding-left: 1.8%;
-  width: 9.5%;
-  height: 9.5%;
-  left: anchor(left); 
-  anchor-name: --ellipse2-anchor;
-}
-
-.ellipse3{
-  position: absolute;
-  position-anchor: --logo3-anchor;
-  margin: 0; 
-  padding-top: 3.5%; 
-  padding-left: 1.75%;
-  width: 9.5%;
-  height: 9.5%;
-  left: anchor(left); 
-  anchor-name: --ellipse3-anchor;
-}
-
-.logo1{
-  position: absolute;
-  position-anchor: --des-anchor;
-  margin: 0; 
-  padding-top: 4%; 
-  padding-left: 4%;
-  width: 7%;
-  height: 7%;
-  left: anchor(left); 
-  anchor-name: --logo1-anchor;
-}
-
-.logo2{
-  position: absolute;
-  position-anchor: --logo1-anchor;
-  margin: 0; 
-  padding-left: 3%;
-  width: 7%;
-  height: 7%;
-  left: anchor(right); 
-  padding-top: 4%; 
-  anchor-name: --logo2-anchor;
-} 
-.logo3{
-  position: absolute;
-  position-anchor: --logo2-anchor;
-  margin: 0; 
-  padding-left: 3%;
-  width: 7%;
-  height: 7%;
-  left: anchor(right); 
-  padding-top: 4%; 
-  anchor-name: --logo3-anchor;
-}
-
-.button{
-  background-color: rgba(79, 152, 145, 0.12);
-  margin-top: 10%;
-  color: #4F9891;
-  border: none;
-  padding: 10px 20px;
-  font-size: 15px;
-  cursor: pointer;
-  border-radius: 5px;
-  align-self: center;
-  anchor-name: --button-anchor;
-}
-
-.jtj{
-  color: white; 
-  font-weight: 700;
-  line-height: 48px; 
-  font-size: 48px;
-  align-self: center;
-  font-family: 'Plus Jakarta Sans';
-  margin-top: 4%;
-  margin-bottom: 0;
-  padding: 0;
-  anchor-name: --jtj-anchor;
-}
-
-.description{
-  color: #A5ABB6;
-  font-weight: 250; 
-  line-height: 32px; 
-  word-spacing: 2px;
-  word-wrap: 'break-word';
-  font-family: "Inter";
-  font-size: 20px;
-  width: 39%;
-  margin: 0; 
-  padding-top: 2%; 
-  padding-bottom: 0;
-  align-self: center;
-  anchor-name: --des-anchor;
-}
-
-.hold1{
-  position: absolute;
-  position-anchor: --button-anchor;
-  left: anchor(right);
-  top: 5%;
-  margin: 0; 
-  padding: 0; 
-  
-}
-
 
 .read-the-docs {
   color: #888;
