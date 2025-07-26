@@ -1,0 +1,26 @@
+
+#highlight{
+    /* background-color: #4F98911F; */
+    margin: auto;
+    color: #4F9891;
+    margin-top: 30px;
+    font-family: Plus Jakarta Sans;
+    font-size: 110%
+  }
+
+
+h1{
+    font-family: Plus Jakarta Sans;
+
+}
+
+p{
+  margin: auto;
+  width: 30%;
+  padding: 10px;
+  color: #676D79;
+  font-size: 110%;
+  font-family: inter;
+  
+  
+}
