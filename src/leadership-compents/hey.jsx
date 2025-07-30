@@ -8,7 +8,7 @@ import React from "react";
 export const leadershipheading = ({ src, title }) => {
  return (
      <div>
-     <div className="pres">
+     <div className="board">
       <h1>Our Board Members</h1>
     </div>
     <div className="pres">
@@ -23,10 +23,10 @@ export const leadershipheading = ({ src, title }) => {
      <div className="lastname">
       <h1>STRICKLER</h1>
       </div>
-    <div style={hobbiesHeadingStyle}>
+      <div className="hobbies">
       <h1>Favorite climb: Ones with rocks</h1>
       </div>
-      <img src={climbingbigHold} alt="Climbing Hold" style={imageStyle} />
+      <img src={big} alt="Climbing Hold" style={imageStyle} />
       <img src={climbingsmallHold} alt="Climbing Hold" style={imagesmallStyle} />
   </div>
  );

@@ -28,3 +28,23 @@
   font-family: "Bebas Neue"; 
   text-shadow: '1px 1px 0 black; -1px -1px 0 black; 1px -1px 0 black; -1px 1px 0 black';
 }
+
+.hobbies { 
+  position: 'absolute';
+  top: '450px';
+  left: '330px';
+  color: '#FFFFFF';
+  z-index: 2;
+  font-size: '.6em';
+  font-family: "Montserrat";
+  text-shadow: '1px 1px 0 black; -1px -1px 0 black; 1px -1px 0 black; -1px 1px 0 black';
+};
+
+.board {
+  position: 'absolute';
+  top: '0px';
+  left: '260px';
+  color: '#99F6C1';
+  z-index: 1;
+  font-size: '.8em';
+};
