@@ -26,8 +26,9 @@ export const leadershipheading = ({ src, title }) => {
       <div className="hobbies">
       <h1>Favorite climb: Ones with rocks</h1>
       </div>
-      <img src={big} alt="Climbing Hold" style={imageStyle} />
-      <img src={climbingsmallHold} alt="Climbing Hold" style={imagesmallStyle} />
+      <img src={climbingbigHold} alt="Climbing Hold" className={big} />
+      <img src={climbingsmallHold} alt="Climbing Hold" className={small} />
   </div>
  );
 };
+export default leadershipheading;
