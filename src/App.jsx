@@ -3,7 +3,7 @@ import LandingPage from './components/LandingPage';
 import Text from './components/Text';
 import Location from './components/Location';
 import JoinTheJourney from './components/JoinTheJourney';
-
+import LeadershipHeading from './leadership-compents/Leadership';
 
 function App() {
   return (
@@ -22,6 +22,7 @@ function App() {
         description="Open to everyone of varying skill level"
          marginTop="100px"
       />
+      <LeadershipHeading />
       <Location></Location>
       <JoinTheJourney></JoinTheJourney>
     </>

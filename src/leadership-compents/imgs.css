@@ -1,21 +1,22 @@
 .large {
-  position: 'absolute'; 
-  width: '250px';       
-  height: 'auto';      
-  top: '300px';        
-  left: '130px';       
+  position: absolute; 
+  width: 383.18596629661005px;       
+  height: auto;      
+  top: 3643px;       
+  left: 200px;       
   z-index: 0;          
-  border-radius: '50%';  
-  object-fit: 'cover';
+  border-radius: 50%;  
+  object-fit: cover;
+  transform: rotate(-14.14deg);
 }
-.small{
-  position: 'absolute'; 
-  width: '150px';     
-  height: 'auto';      
-  top: '50px';        
-  left: '500px';      
-  z-index: 0;         
-  transform: 'rotate(45deg)'; 
-  border-radius: '50%';  
-  object-fit: 'cover';  
-};
+.small {
+  position: absolute; 
+  width: 193.44px;       
+  height: auto;      
+  top: 3230px;       
+  left: 800px;       
+  z-index: 0;          
+  border-radius: 50%;  
+  object-fit: cover;
+  transform: rotate(40deg);
+}

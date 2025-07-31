@@ -1,50 +1,69 @@
 .lastname{
-  position: 'absolute';
-  top: '340px';
-  left: '430px';
-  color: '#FFFFFF';
+  position: absolute;
+  top: 3668px;
+  left: 550px;
+  color: #FFF;
   z-index: 2;
-  font-size: '1.5em';
-  font-family: "Montserrat";
-  text-shadow: '1px 1px 0 black; -1px -1px 0 black; 1px -1px 0 black; -1px 1px 0 black';
+  font-size: 2.8em;
+  font-family: "Inter", sans-serif;
+  text-shadow: 
+  -1px -1px 0 black,  
+  1px -1px 0 black,  
+  -1px 1px 0 black,  
+  1px 1px 0 black;
 }
 .firstname{
-  position: 'absolute';
-  top: '340px';
-  left: '430px';
-  color: '#FFFFFF';
+  position: absolute;
+  top: 3568px;
+  left: 650px;
+  color: #FFF;
   z-index: 2;
-  font-size: '1.5em';
-  font-family: "Montserrat";
-  text-shadow: '1px 1px 0 black; -1px -1px 0 black; 1px -1px 0 black; -1px 1px 0 black';
+  font-size: 2.8em;
+  font-family: "Inter", sans-serif;
+  text-shadow: 
+  -1px -1px 0 black,  
+  1px -1px 0 black,  
+  -1px 1px 0 black,  
+  1px 1px 0 black;
 }
-.pres{
-  position: 'absolute';
-  top: '50px';
-  left: '150px';
-  color: '#99F6C1';
+.pres {
+  width: 716px;
+  height: 141px;
+  position: absolute;
+  top: 3203px;
+  left: 239px;
+  color: #99F6C1;
   z-index: 2;
-  font-size: '2em';
-  font-family: "Bebas Neue"; 
-  text-shadow: '1px 1px 0 black; -1px -1px 0 black; 1px -1px 0 black; -1px 1px 0 black';
+  font-size: 3em;
+  font-family: "Inter", sans-serif;
+  text-shadow: 
+    -1px -1px 0 black,  
+    1px -1px 0 black,  
+    -1px 1px 0 black,  
+    1px 1px 0 black;
 }
 
 .hobbies { 
-  position: 'absolute';
-  top: '450px';
-  left: '330px';
-  color: '#FFFFFF';
+  position: absolute;
+  top: 3810px;
+  left: 520px;
+  color: #FFFFFF;
   z-index: 2;
-  font-size: '.6em';
-  font-family: "Montserrat";
-  text-shadow: '1px 1px 0 black; -1px -1px 0 black; 1px -1px 0 black; -1px 1px 0 black';
-};
+  font-size: .9em;
+  font-family: "Inter", sans-serif;
+  text-shadow: 
+  -1px -1px 0 black,  
+  1px -1px 0 black,  
+  -1px 1px 0 black,  
+  1px 1px 0 black;
+}
 
 .board {
-  position: 'absolute';
-  top: '0px';
-  left: '260px';
-  color: '#99F6C1';
+  position: absolute;
+  top: 3100px;
+  left: 450px;
+  color: #2D3139;
   z-index: 1;
-  font-size: '.8em';
+  font-family: "Plus Jakarta Sans";
+  font-size: 1.3em;
 };
