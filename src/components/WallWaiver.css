@@ -1,0 +1,26 @@
+.wall-waiver-container {
+    background-color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+
+  .wall-waiver-heading {
+    font-weight: bold;
+    font-size: 1.8rem;
+  }
+
+  .wall-waiver-text {
+    margin: 1rem auto;
+    max-width: 600px;
+  }
+
+  .wall-waiver-button {
+    background-color: #00B19E;
+    border: none;
+    border-radius: 30px;
+    padding: 0.8rem 1.5rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+  }

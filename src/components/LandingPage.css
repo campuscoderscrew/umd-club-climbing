@@ -1,0 +1,131 @@
+
+
+/* Landing Page Styles */
+.landing-page {
+  min-height: 100vh;
+  color: white;
+  font-family: 'Inter', Arial, sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero Container - 2x2 Grid */
+.hero-container {
+  min-height: 70vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  
+}
+
+/* Grid Quadrants */
+.grid-top-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  position: relative;
+  top: -40px;
+  right: -20px;
+}
+
+.grid-top-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.grid-bottom-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.grid-bottom-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  position: relative;
+  top: -40px;
+  right: -40px;
+}
+
+.club-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 0.85;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: left;
+}
+
+.hero-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 4.5rem;
+  font-weight: 900;
+  line-height: 0.85;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+/* all climn holds */
+.climbing-hold {
+  max-width: 300%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* Individual Hold Styles */
+.small-hold {
+  width: 160px;
+  /* height: 350px; */
+  position: absolute;
+  top: -30%;
+  right: 60%;
+}
+
+.big-hold {
+  width: 270px;
+  /* height: 120px; */
+  position: absolute;
+  bottom: -20%;
+  left: 40%;
+}
+
+.teal-hold-1 {
+  width: 350px;
+  /* height: 350px; */
+  position: absolute;
+  top: -70%;
+  left: 40%;
+}
+
+.teal-hold-2 {
+  width: 350px;
+  /* height: 350px; */
+  position: absolute;
+  bottom: -50%;
+  right: 30%;
+  transform: rotate(10deg);
+}
+
+
+.highlight-text {
+  color: #000000;
+  -webkit-text-stroke: 2px white;
+}

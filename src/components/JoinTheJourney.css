@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.plus-jakarta-sans-1 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.inter-1 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.card {
+  padding: 2em;
+}
+
+/* Main container for the component */
+.join-container {
+  position: relative; /* Important: enables relative positioning context */
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding-bottom: 5%;
+  background: transparent; /* Optional - set a background color if needed */
+  margin-top: 3000px;
+}
+
+/* Background holds */
+.hold1 {
+  position: absolute;
+  left: 55%;
+  top: -18%;
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+}
+
+.hold2 {
+  position: absolute;
+  left: -55%;
+  top: -52%;
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+}
+
+/* Logos and ellipses wrapper */
+.logos {
+  display: flex;
+  flex-direction: row;
+  width: 37%;
+  height: 28%;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Ellipses */
+.ellipse1,
+.ellipse2,
+.ellipse3 {
+  position: absolute;
+  width: 9.5%;
+  height: 9.5%;
+  top: 3.5%;
+}
+
+.ellipse1 {
+  left: 0%;
+}
+
+.ellipse2 {
+  left: 33%;
+}
+
+.ellipse3 {
+  left: 66%;
+}
+
+/* Logos */
+.logo1,
+.logo2,
+.logo3 {
+  position: absolute;
+  width: 7%;
+  height: 7%;
+  top: 4%;
+}
+
+.logo1 {
+  left: 2%;
+}
+
+.logo2 {
+  left: 35%;
+}
+
+.logo3 {
+  left: 68%;
+}
+
+/* Join Us Button */
+.button {
+  background-color: rgba(79, 152, 145, 0.12);
+  margin-top: 10%;
+  color: #4F9891;
+  border: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  align-self: center;
+  z-index: 1;
+}
+
+/* Join the Journey Text */
+.jtj {
+  color: white;
+  font-weight: 700;
+  line-height: 48px;
+  font-size: 48px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  margin-top: 4%;
+  margin-bottom: 0;
+  padding: 0;
+  align-self: center;
+  z-index: 1;
+}
+
+/* Description text */
+.description {
+  color: #A5ABB6;
+  font-weight: 250;
+  line-height: 32px;
+  word-spacing: 2px;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  width: 39%;
+  margin: 0;
+  padding-top: 2%;
+  padding-bottom: 0;
+  align-self: center;
+  text-align: center;
+  z-index: 1;
+}
+
+.read-the-docs {
+  color: #888;
+}
