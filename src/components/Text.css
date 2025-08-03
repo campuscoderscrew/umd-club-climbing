@@ -36,3 +36,43 @@
   font-weight: 300;
   line-height: 30px;
 }
+
+/* Tablet - 768px to 1024px */
+@media (max-width: 1024px) {
+  .text-container h1 {
+    font-size: 32px;
+  }
+
+  .text-container p {
+    width: 45%; 
+    font-size: 17px;
+    line-height: 28px;
+  }
+
+  #highlight {
+    font-size: 15px;
+    padding: 0.5px 18px;
+  }
+}
+
+/* Phone - 600px and below */
+@media (max-width: 600px) {
+  .text-container h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    line-height: 1.3;
+  }
+
+  .text-container p {
+    width: 85%; 
+    font-size: 14px;
+    line-height: 24px;
+    margin: auto;
+  }
+
+  #highlight {
+    font-size: 13px;
+    padding: 0.5px 15px;
+    line-height: 26px;
+  }
+}
