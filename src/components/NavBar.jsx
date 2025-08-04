@@ -14,7 +14,13 @@ const NavBar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const tabs = ['Home', 'About', 'Location/Times', 'Gallery', 'Join Us'];
+  const tabs = [
+    { name: 'Home', href: '#home' },
+    { name: 'About', href: '#about' },
+    { name: 'Services', href: '#services' },
+    { name: 'Location/Times', href: '#times' },
+    { name: 'Join Us', href: '#join' },
+  ];
 
   return (
     <div className="navbar-wrapper">
@@ -22,9 +28,9 @@ const NavBar = () => {
       <nav className={`navbar-nav ${scrolled ? 'navbar-scrolled' : ''}`}>
         <div className="navbar-tabs">
           {tabs.map((tab, idx) => (
-            <div key={idx} className="nav-tab">
-              {tab}
-            </div>
+            <a key={idx} href={tab.href} className="nav-tab">
+              {tab.name}
+            </a>
           ))}
         </div>
       </nav>
