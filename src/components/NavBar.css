@@ -48,16 +48,19 @@
 
 .navbar-tabs {
   display: flex;
-  gap: 2rem;
+  gap: 1.2rem;
   width: 100%;
   justify-content: space-evenly;
 }
 
 .nav-tab {
-  padding: 0.4rem 0.8rem;
+  font-size: 1.3rem;
+  padding: 0.2rem .5rem;
   border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  text-decoration: none;
+  color: white;
 }
 
 .nav-tab:hover {
