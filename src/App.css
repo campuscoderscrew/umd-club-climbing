@@ -7,4 +7,11 @@
     text-align: center;
     margin: auto;
     margin-top: 40px;
+  
+}
+html {
+  scroll-behavior: smooth;
+}
+.LandingPage {
+  margin-top: 10000px;
 }
