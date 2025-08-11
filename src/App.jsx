@@ -6,6 +6,8 @@ import JoinTheJourney from './components/JoinTheJourney';
 import WallWaiver from './components/WallWaiver';
 import NavBar from './components/NavBar';
 import Icon from './components/Icon';
+import VideoSection from './components/VideoSection';
+
 
 
 function App() {
@@ -24,7 +26,9 @@ function App() {
           marginTop="300px"
         />
       </section>
-       <div class="center-box"></div>
+      
+      <VideoSection />
+
        <section id="services">
         <Text
           highlight="Services"
