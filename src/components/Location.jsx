@@ -1,16 +1,15 @@
 import React from "react";
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import { GoogleMap, LoadScript} from "@react-google-maps/api";
 import iphoneFrame from "../assets/iphone15.png";
 import "./Location.css";
 
-const apiKey = import.meta.env.VITE_KEY;
+const apiKey = import.meta.env.VITE_KEY; {/*.env file must be in root directory for api key import to work*/}
 const center = { lat: 38.9936, lng: -76.9452 };
 
 export default function Location() {
   return (
-    <html>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <div className="location-container">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <div className="Location">
           <div className="text">
             <br />
@@ -35,7 +34,9 @@ export default function Location() {
                   zoom={16}
                   options={{ disableDefaultUI: true }}
                 >
-                  <Marker position={center} />
+                  <gmp-advanced-marker position={center} ></gmp-advanced-marker> 
+                  
+                  {/*changed to a non depracted element*/}
                 </GoogleMap>
               </LoadScript>
             </div>
@@ -44,6 +45,5 @@ export default function Location() {
           </div>
         </div>
       </div>
-    </html>
   );
 }

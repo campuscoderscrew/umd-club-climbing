@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&family=Inter:wght@300;400&display=swap');
 
 .location-container {
+  flex-wrap: wrap;
   position: relative;
   width: 100%;
   padding: 5% 8%;
   box-sizing: border-box;
   margin-top: 1000px;
-  text-align: left; /* keep left aligned for location */
+  text-align: left;
+  /* keep left aligned for location */
 }
 
 a button {
@@ -25,8 +27,9 @@ a button {
 }
 
 .Location {
+  /*phone goes under the text at a certain size*/
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
   gap: 2rem;
@@ -38,7 +41,7 @@ a button {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
   font-size: clamp(14px, 1.6vw, 18px);
-  color: #FFFFFF; /* white text */
+  color: #000000;
   margin: 0;
   line-height: 1.7;
 }
@@ -47,7 +50,7 @@ a button {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 400;
   font-size: clamp(14px, 2vw, 14px); /* fixed size 16px like your example */
-  color: #4F9891; /* white */
+  color: #000000; /*black text to contrast background*/
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
@@ -56,7 +59,7 @@ a button {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 700;
   font-size: clamp(24px, 3vw, 40px);
-  color: #FFFFFF; /* white */
+  color: #000000;
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -96,21 +99,39 @@ a button {
 }
 
 /* Responsive widths matching your example */
-
 @media (min-width: 1440px) {
   .text {
     width: 40%;
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1800px) { /*1800px is the size where the background changes from mainly black to mainly white*/
+
+  /*Change font color to contrast background*/
   .text {
-    width: 55%;
+    width: 60%;
+    color: #ffffff;
+  }
+
+  .text h1 {
+    color: #ffffff;
+  }
+
+  .text h2 {
+    color: #ffffff;
   }
 }
 
 @media (max-width: 600px) {
   .text {
     width: 90%;
+    color: #ffffff;
   }
+    .text h1 {
+      color: #ffffff;
+    }
+  
+    .text h2 {
+      color: #ffffff;
+    }
 }
