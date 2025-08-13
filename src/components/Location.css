@@ -15,7 +15,6 @@ a button {
   background-color: #ffffff;
   border: 0;
   border-radius: 999px;
-  padding: 8px 16px;
   cursor: pointer;
   color: #000000;
   box-shadow: 0 1px 3px #1f2229;
@@ -24,6 +23,12 @@ a button {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 1rem;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  padding-right: 25px;
 }
 
 .Location {
@@ -50,9 +55,11 @@ a button {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 400;
   font-size: clamp(14px, 2vw, 14px); /* fixed size 16px like your example */
-  color: #000000; /*black text to contrast background*/
+  color: #4F9891; /*black text to contrast background*/
+  background-color: rgba(79, 152, 145, 0.12);
   margin-top: 0;
   margin-bottom: 0.5rem;
+  width: fit-content;
 }
 
 .text h1 {
@@ -105,7 +112,7 @@ a button {
   }
 }
 
-@media (max-width: 1800px) { /*1800px is the size where the background changes from mainly black to mainly white*/
+@media (max-width: 1675px) { /*1675xpx is the size where the background changes from mainly black to mainly white*/
 
   /*Change font color to contrast background*/
   .text {
@@ -121,6 +128,27 @@ a button {
     color: #ffffff;
   }
 }
+
+@media (max-width: 1000px){
+.phone-wrapper {
+    flex: 0 0 auto;
+    margin: 0;
+    position: relative;
+    width: 443px;
+    height: 245px;
+    overflow: hidden;
+  }
+
+  .map-mask {
+    position: absolute;
+    top: 15px;
+    left: 8px;
+    right: 8px;
+    bottom: 15px;
+    border-radius: 32px;
+    overflow: hidden;
+    z-index: 2;
+  }}
 
 @media (max-width: 600px) {
   .text {
