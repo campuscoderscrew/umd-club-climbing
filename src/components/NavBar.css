@@ -1,65 +1,154 @@
-/* Import Plus Jakarta Sans font */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
 
+/* Main navbar container: sticky at top, flex layout, centered items, transparent bg initially */
 .navbar-wrapper {
   position: sticky;
-  top: 10px;
+  top: 0;
   z-index: 1000;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 1.5rem;
-  margin-top: 1rem;
-  gap: 1rem;
+  justify-content: center; /* center nav by default */
+  padding: 0.5rem 1.5rem;
   font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: transparent;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Logo container stays fixed to the left with some top padding */
+.navbar-logo-wrapper {
+  padding-top: 1rem;
+  position: absolute;
+  left: 1.5rem;
+}
+
+/* Logo image size */
 .navbar-logo {
-  height: 80px;
+  height: 85px;
 }
 
+/* Navigation links container: dark background, rounded, flex center */
 .navbar-nav {
   background-color: #141411;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  border: 1px solid white;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.75rem 1.5rem;
-  color: white;
-  font-weight: bold;
-  font-size: 1rem;
-  border-radius: 999px;
-  width: 66%;
-  max-width: 800px;
-  border: 1px solid white;
-  transition: border-color 0.5s ease, box-shadow 0.5s ease;
+  transition: all 0.3s ease;
 }
 
-/* No border visible when at top */
-.navbar-nav:not(.navbar-scrolled) {
-  border-color: transparent;
-  box-shadow: none;
-}
-
-/* Border visible with subtle glow when scrolled */
-.navbar-nav.navbar-scrolled {
-  border-color: white;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-}
-
+/* Container for individual nav tabs, spaced out horizontally */
 .navbar-tabs {
   display: flex;
-  gap: 2rem;
-  width: 100%;
-  justify-content: space-evenly;
+  gap: 1.5rem;
 }
 
+/* Each nav link styling */
 .nav-tab {
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
   padding: 0.4rem 0.8rem;
   border-radius: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
+/* Hover effect for nav tabs */
 .nav-tab:hover {
   background-color: #333;
+  color: rgb(255, 255, 255);
+}
+
+/* Hamburger menu hidden by default */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  position: absolute;
+  padding-top: 2%;
+  right: 1.5rem;
+  cursor: pointer;
+}
+
+/* Each bar of hamburger */
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger in open state: transform bars to X shape */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+/* middle bar hidden */
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
+/* Responsive styling for smaller screns */
+@media (max-width: 768px) {
+  /* Navbar background turns solid black and shrinks height */
+  .navbar-wrapper {
+    background-color: black;
+    height: 45px;
+    justify-content: center;
+  }
+
+  /* Smaller logo in mobile */
+  .navbar-logo {
+    height: 60px;
+  }
+  
+  /* Logo position adjustment */
+  .navbar-logo-wrapper {
+    left: 1rem;
+    top: -.6rem;
+  }
+
+  /* Nav menu becomes a dropdown hidden by default */
+  .navbar-nav {
+    position: absolute;
+    top: 3rem; 
+    right: 1rem;
+    flex-direction: column;
+    background-color: #141411;
+    padding: 1rem 2rem;
+    display: none;
+    width: auto;
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    z-index: 999;
+  }
+
+  /* Show menu when hamburger toggled open */
+  .navbar-nav.open {
+    display: flex;
+    align-items: flex-start; /* align menu items to left inside dropdown */
+  }
+
+  /* Stack tabs vertically and left align text */
+  .navbar-tabs {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+  }
+
+  /* Hamburger stays top right */
+  .hamburger {
+    display: flex;
+    top: .5rem;
+    right: 1rem;
+  }
 }
