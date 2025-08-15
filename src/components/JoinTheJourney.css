@@ -24,88 +24,90 @@
   width: 100%;
   min-height: 600px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  overflow: hidden;
+  margin-left: -5%;
   padding-bottom: 5%;
   background: transparent; /* Optional - set a background color if needed */
   margin-top: 1500px;
 }
 
+.words {
+  position: relative; /* Important: enables relative positioning context */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 600px;
+  min-height: fit-content;
+  padding: 0;
+  margin: 0; 
+  padding-bottom: 5%;
+}
+
+
+
 /* Background holds */
-.hold1 {
-  position: absolute;
-  left: 55%;
-  top: -18%;
+.hold1{
+   position: relative; /* Important: enables relative positioning context */
+  display: flex;
+  align-items: center;
+  padding-bottom: 5%;
   margin: 0;
   padding: 0;
-  z-index: 0;
+  margin-left: -2%;
 }
 
 .hold2 {
-  position: absolute;
-  left: -55%;
-  top: -52%;
+   position: relative; /* Important: enables relative positioning context */
+  display: flex;
+  align-items: center;
+  padding-bottom: 5%;
   margin: 0;
   padding: 0;
-  z-index: 0;
 }
 
 /* Logos and ellipses wrapper */
-.logos {
+ .logos {
   display: flex;
   flex-direction: row;
-  width: 37%;
-  height: 28%;
   justify-content: center;
   margin: 0;
   padding: 0;
+  width: 40%;
+  height: 20%;
+  padding-top: 4%;
   position: relative;
   z-index: 1;
-}
-
-/* Ellipses */
-.ellipse1,
-.ellipse2,
-.ellipse3 {
-  position: absolute;
-  width: 9.5%;
-  height: 9.5%;
-  top: 3.5%;
-}
-
-.ellipse1 {
-  left: 0%;
-}
-
-.ellipse2 {
-  left: 33%;
-}
-
-.ellipse3 {
-  left: 66%;
-}
-
-/* Logos */
-.logo1,
-.logo2,
-.logo3 {
-  position: absolute;
-  width: 7%;
-  height: 7%;
-  top: 4%;
-}
+} 
 
 .logo1 {
-  left: 2%;
+  width: 25%;
+  height: 50%;
+  padding: 3%;
+}
+
+.logo1:hover {
+      cursor: grab; /* Changes cursor to a hand pointer */
+}
+
+.logo2:hover {
+      cursor: grab; /* Changes cursor to a hand pointer */
+}
+
+.logo3:hover {
+      cursor: grab; /* Changes cursor to a hand pointer */
 }
 
 .logo2 {
-  left: 35%;
+  width: 25%;
+  height: 50%;
+  padding: 3%;
 }
 
 .logo3 {
-  left: 68%;
+  width: 25%;
+  height: 20%;
+  padding: 3%;
 }
 
 /* Join Us Button */
@@ -115,7 +117,7 @@
   color: #4F9891;
   border: none;
   padding: 10px 20px;
-  font-size: 15px;
+  font-size: 20px;
   cursor: pointer;
   border-radius: 5px;
   align-self: center;
@@ -127,7 +129,7 @@
   color: white;
   font-weight: 700;
   line-height: 48px;
-  font-size: 48px;
+  font-size: 52px;
   font-family: 'Plus Jakarta Sans', sans-serif;
   margin-top: 4%;
   margin-bottom: 0;
@@ -143,8 +145,8 @@
   line-height: 32px;
   word-spacing: 2px;
   font-family: "Inter", sans-serif;
-  font-size: 20px;
-  width: 39%;
+  font-size: 22px;
+  width:90%;
   margin: 0;
   padding-top: 2%;
   padding-bottom: 0;
@@ -153,6 +155,92 @@
   z-index: 1;
 }
 
-.read-the-docs {
-  color: #888;
+
+
+
+@media (max-width: 768px) {
+      .join-container {
+        padding-left: 5%;
+  }
+  .words {
+  min-width: 300px;
+  min-height: fit-content;
+}
+.hold1{
+  width: 30%; 
+  height: 30%; 
+}
+.hold2{
+  width: 30%; 
+  height: 30%; 
+}
+.button {
+  padding: 5px 15px;
+  font-size: 10px;
+}
+.jtj{
+  font-size: 36px;
+}
+.description{
+  font-size:16px;
+}
+
+
+}
+
+
+@media (max-width: 1024px) {
+  .words {
+  min-width: 300px;
+  min-height: fit-content;
+}
+.hold1{
+  width: 35%; 
+  height: 35%; 
+  margin-left: 5%;
+}
+.hold2{
+  width: 35%; 
+  height: 35%; 
+}
+.button {
+  padding: 5px 15px;
+  font-size: 15px;
+}
+.jtj{
+  font-size: 36px;
+}
+.description{
+  font-size:24px;
+}
+
+
+}
+
+@media (max-width: 1200px) {
+  .words {
+  min-width: 300px;
+  min-height: fit-content;
+}
+.hold1{
+  width: 35%; 
+  height: 35%; 
+  margin-left: 3%;
+}
+.hold2{
+  width: 35%; 
+  height: 35%; 
+}
+.button {
+  padding: 5px 15px;
+  font-size: 15px;
+}
+.jtj{
+  font-size: 36px;
+}
+.description{
+  font-size:18px;
+}
+
+
 }

@@ -38,7 +38,7 @@ function App() {
         <Location />
   
       <section id="join">
-        <JoinTheJourney />
+        <JoinTheJourney className="joinjourney"/>
       </section>
 
       <WallWaiver></WallWaiver>
