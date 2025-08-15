@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&family=Inter:wght@300;400&display=swap');
+
+.location-container {
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  padding: 5% 8%;
+  box-sizing: border-box;
+  margin-top: 30%;
+  text-align: left;
+}
+
+/* NEW: Map link button styling */
+.map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #ffffff;
+  border-radius: 500px;
+  padding: 4px 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: #000000;
+  text-decoration: none;
+  margin-top: 15px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.map-link:hover {
+  background-color: #f3f3f3;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+.map-link img {
+  height: 14px;
+}
+
+.Location {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+}
+
+.text {
+  flex: 0 0 450px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: clamp(14px, 1.6vw, 18px);
+  color: #000000;
+  margin: 0;
+  line-height: 1.7;
+}
+
+.text h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 2vw, 14px);
+  line-height: 1.8;
+  color: #4F9891;
+  background-color: #4F989126;
+  padding: 0.5px 15px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 2px;
+}
+
+.text h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: clamp(24px, 3vw, 40px);
+  color: #000000;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.phone-wrapper {
+  flex: 0 0 auto;
+  margin: 0;
+  position: relative;
+  width: 682px;
+  height: 377px;
+  overflow: hidden;
+}
+
+.phone-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.map-mask {
+  position: absolute;
+  top: 35px;
+  left: 10px;
+  right: 10px;
+  bottom: 25px;
+  border-radius: 32px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+@media (min-width: 1440px) {
+  .text {
+    width: 40%;
+  }
+}
+
+@media (max-width: 1675px) {
+  .text {
+    width: 60%;
+    color: #ffffff;
+  }
+  .text h1 {
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 1000px) {
+  .phone-wrapper {
+    width: 443px;
+    height: 245px;
+  }
+  .map-mask {
+    top: 15px;
+    left: 8px;
+    right: 8px;
+    bottom: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .text {
+    width: 90%;
+    color: #ffffff;
+  }
+  .text h1 {
+    color: #ffffff;
+  }
+}

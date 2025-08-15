@@ -1,0 +1,65 @@
+/* Icon.css */
+
+.icon-container {
+  position: relative; /* Create positioning context */
+  width: 100%;
+  min-height: 400px; /* Ensure enough height for positioning */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  margin-top: 100px; /* Default margin */
+}
+
+/* Mountain positioning */
+.mountain {
+  position: absolute;
+  left: 15%; /* Position from left edge */
+  bottom: 55%; /* Position from bottom */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto; /* Don't constrain width */
+  
+}
+
+.mountain img {
+    transform: scale(1.4);
+}
+
+/* Carabiner positioning */
+.carabiner {
+  position: absolute;
+  bottom: 20%; /* Position higher than mountain */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  transform: translateY(-50%); /* Center vertically */
+}
+
+/* Globe positioning */
+.globe {
+  position: absolute;
+  right: 15%; /* Position from right edge */
+  bottom: 55%; /* Same vertical position as mountain */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+}
+
+/* Image styling */
+.icon-container img {
+  width: 100px; /* Set consistent size */
+  height: 100px; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure entire image is visible */
+}
+
+/* Heading styling */
+.icon-container h3 {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  width: 220px;
+  text-align: center;
+  margin-top: 15px; /* Space between icon and text */
+}
