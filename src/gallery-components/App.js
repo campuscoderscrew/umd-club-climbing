@@ -16,7 +16,7 @@ function App() {
        "images/rock6.jpg",
        "images/rock7.jpg",
      ],
-     direction: "left"
+     direction: "right"
    },
 
 
@@ -41,4 +41,3 @@ function App() {
 
 
 export default App;
-

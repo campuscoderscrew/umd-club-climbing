@@ -1,120 +1,138 @@
 :root{
- --slide-count: 2;
- --slider-height: 150px;
- --slider-width: 320px;
- --gap: 0px;
- --time: 10s;
+--slide-count: 6;
+--slide-height: 150px;
+--slide-width: 320px;
+--gap: 0px;
+--time: 50s;
+
+
 
 
 }
+
+
 
 
 ::before, *::after {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
+
+
 
 
 img{
- display: block;
- width: 100%;
- height: 100%;
- object-fit: cover;
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
 }
+
+
 
 
 body{
- display: flex;
- align-items: center;
- height: 100vh;
- background: #050e1f;
- background-image: radical-gradient(
-   circle at 25% 15%,
-   rgba(255,255,255,0.03)0%,
-   rgba(255,255,255,0.2)5%,
-   transparent 5%,
+display: flex;
+align-items: center;
+height: 100vh;
+background: #050e1f;
+background-image: radial-gradient(
+  circle at 25% 15%,
+  rgba(255,255,255,0.03)0%,
+  rgba(255,255,255,0.2)5%,
+  transparent 5%,
+  transparent 100%
+  ),
+  radial-gradient(
+    circle at 50% 35%,
+    rgba(255, 255, 255, 0.03),
+    transparent 5%,
    transparent 100%
-   ),
-   radical-gradient(
-     circle at 50% 35%,
-     rgba(255, 255, 255, 0.03),
-     transparent 5%,
-    transparent 100%
-   ),
-    radical-gradient(
-     circle at 65% 60%,
-     rgba(255, 255, 255, 0.03),
-     transparent 5%,
-    transparent 100%
-   ),
-    radical-gradient(
-     circle at 35% 85%,
-     rgba(255, 255, 255, 0.03),
-     transparent 5%,
-    transparent 100%
-   ),
-   radical-gradient(circle at center, #175070, #050e1f);
-   background-repeat: no-repeat;
-   background-size: cover;
-   overflow: hidden;
- }
+  ),
+   radial-gradient(
+    circle at 65% 60%,
+    rgba(255, 255, 255, 0.03),
+    transparent 5%,
+   transparent 100%
+  ),
+   radial-gradient(
+    circle at 35% 85%,
+    rgba(255, 255, 255, 0.03),
+    transparent 5%,
+   transparent 100%
+  ),
+  radial-gradient(circle at center, #175070, #050e1f);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
 
 
- .sliders-container{
-   position: relative;
-   display: flex;
-   flex-direction: column;
-   row-gap: 25px;
- }
-
-
- .slider-container::before, .sliders-container::after{
-   content: "";
-   position: absolute;
-   top: 0;
-   width: 20px;
-   height: 100%;
-   z-index: 1;
- }
-  .slider-container::before{
-   left: 0;
-   background-image: linear-gradient(to right, #091d3d, transparent);
- }
- .slider-container::after{
-   right: 0;
-   background-image: linear-gradient(to left, #091d3d, transparent);
- }
- @media (max-width: 1110px){
-   :root{
-   --slide-height: 110px;
-   --slide-width: 260px;
-   }
- }
 
 
 .sliders-container{
- row-gap: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
 }
+
+
+
+
+.slider-container::before, .sliders-container::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  z-index: 1;
+}
+ .slider-container::before{
+  left: 0;
+  background-image: linear-gradient(to right, #091d3d, transparent);
+}
+.slider-container::after{
+  right: 0;
+  background-image: linear-gradient(to left, #091d3d, transparent);
+}
+@media (max-width: 1110px){
+  :root{
+  --slide-height: 110px;
+  --slide-width: 260px;
+  }
+}
+
+
+
+
+.sliders-container{
+row-gap: 15px;
+}
+
+
 
 
 @media (max-width: 860px){
- :root{
-   --slide-width: 200px;
- }
+:root{
+  --slide-width: 200px;
 }
+}
+
+
 
 
 @media (max-width: 460){
-   :root{
-   --slide-height: 90px;
-   --slide-width: 180px;
-   }
- }
-
-
-.sliders-container{
- row-gap: 10px;
+  :root{
+  --slide-height: 90px;
+  --slide-width: 180px;
+  }
 }
 
 
+
+
+.sliders-container{
+row-gap: 10px;
+}

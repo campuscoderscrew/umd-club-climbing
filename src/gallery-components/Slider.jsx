@@ -33,5 +33,3 @@ function Slider({ id, images, direction }) {
 
 
 export default Slider;
-
-
