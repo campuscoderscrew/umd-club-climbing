@@ -9,6 +9,8 @@
   margin-top: 100px; /* Default margin */
 }
 
+
+
 /* Mountain positioning */
 .mountain {
   position: absolute;
@@ -18,7 +20,11 @@
   flex-direction: column;
   align-items: center;
   width: auto; /* Don't constrain width */
-  
+  transition: 0.5s;
+}
+
+.mountain:hover{
+  transform: scale(1.2);
 }
 
 .mountain img {
@@ -34,6 +40,13 @@
   align-items: center;
   width: auto;
   transform: translateY(-50%); /* Center vertically */
+  transition: 0.5s;
+}
+
+.carabiner:hover{
+  transform: scale(1.2);
+  position:absolute;
+  bottom:150px;
 }
 
 /* Globe positioning */
@@ -45,6 +58,12 @@
   flex-direction: column;
   align-items: center;
   width: auto;
+  transition: 0.5s;
+
+}
+
+.globe:hover{
+  transform: scale(1.2);
 }
 
 /* Image styling */

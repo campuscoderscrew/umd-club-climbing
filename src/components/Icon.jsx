@@ -23,8 +23,6 @@ const Icon = ({ marginTop = '100px'}) => {
       <h3>Meeting New People</h3>
       </div>
       
-
-    
     
     </div>
   );
