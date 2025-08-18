@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 /* Import Plus Jakarta Sans font */
+=======
+>>>>>>> 2c04efc616792c2fbcfa16cc17588597efae2b67
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
 
 .navbar-wrapper {
   position: sticky;
+<<<<<<< HEAD
   top: 10px;
   z-index: 1000;
   display: flex;
@@ -62,4 +66,118 @@
 
 .nav-tab:hover {
   background-color: #333;
+=======
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: transparent;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-scrolled {
+  background-color: rgba(20, 20, 17, 0.9);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.6rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  height: 70px;
+  transition: transform 0.3s ease;
+}
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Desktop Nav */
+.navbar-nav {
+  display: flex;
+  gap: 2rem;
+}
+.nav-tab {
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  position: relative;
+  padding: 0.4rem 0;
+  transition: color 0.3s ease;
+}
+.nav-tab::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+.nav-tab:hover {
+  color: #f0f0f0;
+}
+.nav-tab:hover::after {
+  width: 100%;
+}
+
+/* Hamburger (Mobile Only) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.hamburger span {
+  width: 24px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 4px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+  .navbar-nav {
+    position: absolute;
+    top: 70px;
+    right: 1rem;
+    flex-direction: column;
+    background-color: #141411;
+    padding: 1.2rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    transform: scale(0.95);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .navbar-nav.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+  }
+  .hamburger {
+    display: flex;
+  }
+>>>>>>> 2c04efc616792c2fbcfa16cc17588597efae2b67
 }

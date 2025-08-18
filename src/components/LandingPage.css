@@ -5,9 +5,16 @@ body, html {
 
 /* Landing Page Styles */
 .landing-page {
+<<<<<<< HEAD
   min-height: 100vh;
   color: white;
   font-family: 'Inter', Arial;
+=======
+  min-height: auto;
+  color: white;
+  font-family: 'Inter', Arial;
+  margin-bottom: 20%;
+>>>>>>> 2c04efc616792c2fbcfa16cc17588597efae2b67
 }
 
 /* Hero Container - 2x2 Grid */
@@ -250,4 +257,8 @@ body, html {
   }
   
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 2c04efc616792c2fbcfa16cc17588597efae2b67

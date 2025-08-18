@@ -6,6 +6,8 @@ import JoinTheJourney from './components/JoinTheJourney';
 import WallWaiver from './components/WallWaiver';
 import NavBar from './components/NavBar';
 import Icon from './components/Icon';
+import VideoSection from './components/VideoSection';
+
 
 
 function App() {
@@ -21,10 +23,12 @@ function App() {
           highlight="Our Mission"
           title="Climbing for all, Built with Purpose"
           description="We aim to grow the climbing community by offering fun experiences where members can stay active, connect with others, and build their skills."
-          marginTop="300px"
+          marginTop="0px"
         />
       </section>
-       <div class="center-box"></div>
+      
+      <VideoSection />
+
        <section id="services">
         <Text
           highlight="Services"

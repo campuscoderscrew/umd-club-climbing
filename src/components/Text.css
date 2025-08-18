@@ -5,7 +5,11 @@
   text-align: center;
   font-family: 'Plus Jakarta Sans', sans-serif;
   padding: 2rem 1rem;
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> 2c04efc616792c2fbcfa16cc17588597efae2b67
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.8s ease, transform 0.8s ease;
@@ -97,9 +101,26 @@
 @media (max-width: 600px) {
   .text-container p {
     width: 90%;
+<<<<<<< HEAD
   }
 
   #highlight {
     padding: 0.5px 15px;
+=======
+    font-size: clamp(12px, 2.5vw, 14px); /* smaller font */
+  }
+
+  .text-container h1 {
+    font-size: clamp(18px, 5vw, 24px); /* shrink title */
+  }
+
+  .text-container h3 {
+    font-size: clamp(12px, 3vw, 14px); /* shrink highlight header */
+  }
+
+  #highlight {
+    padding: 0.5px 12px;
+    font-size: clamp(11px, 3vw, 13px); /* shrink highlight text */
+>>>>>>> 2c04efc616792c2fbcfa16cc17588597efae2b67
   }
 }

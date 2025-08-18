@@ -1,17 +1,4 @@
 
-.center-box {
-  width: 80%;
-  height: 594px;
-  background-color: #141414;
-  border-radius: 80px;
-    text-align: center;
-    margin: auto;
-    margin-top: 40px;
-  
-}
 html {
   scroll-behavior: smooth;
-}
-.LandingPage {
-  margin-top: 10000px;
 }

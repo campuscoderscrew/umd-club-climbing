@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&family=Inter:wght@300;400&display=swap');
 
 .location-container {
+<<<<<<< HEAD
+=======
+  flex-wrap: wrap;
+>>>>>>> 2c04efc616792c2fbcfa16cc17588597efae2b67
   position: relative;
   width: 100%;
   padding: 5% 8%;
   box-sizing: border-box;
+<<<<<<< HEAD
   margin-top: 1000px;
   text-align: left; /* keep left aligned for location */
 }
@@ -22,11 +27,46 @@ a button {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 1rem;
+=======
+  margin-top: 30%;
+  text-align: left;
+}
+
+/* NEW: Map link button styling */
+.map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #ffffff;
+  border-radius: 500px;
+  padding: 4px 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: #000000;
+  text-decoration: none;
+  margin-top: 15px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.map-link:hover {
+  background-color: #f3f3f3;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+.map-link img {
+  height: 14px;
+>>>>>>> 2c04efc616792c2fbcfa16cc17588597efae2b67
 }
 
 .Location {
   display: flex;
+<<<<<<< HEAD
   flex-wrap: nowrap;
+=======
+  flex-wrap: wrap;
+>>>>>>> 2c04efc616792c2fbcfa16cc17588597efae2b67
   align-items: flex-start;
   justify-content: space-between;
   gap: 2rem;
@@ -38,33 +78,57 @@ a button {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
   font-size: clamp(14px, 1.6vw, 18px);
+<<<<<<< HEAD
   color: #FFFFFF; /* white text */
+=======
+  color: #000000;
+>>>>>>> 2c04efc616792c2fbcfa16cc17588597efae2b67
   margin: 0;
   line-height: 1.7;
 }
 
 .text h2 {
+<<<<<<< HEAD
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 400;
   font-size: clamp(14px, 2vw, 14px); /* fixed size 16px like your example */
   color: #4F9891; /* white */
   margin-top: 0;
   margin-bottom: 0.5rem;
+=======
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 2vw, 14px);
+  line-height: 1.8;
+  color: #4F9891;
+  background-color: #4F989126;
+  padding: 0.5px 15px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 2px;
+>>>>>>> 2c04efc616792c2fbcfa16cc17588597efae2b67
 }
 
 .text h1 {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 700;
   font-size: clamp(24px, 3vw, 40px);
+<<<<<<< HEAD
   color: #FFFFFF; /* white */
+=======
+  color: #000000;
+>>>>>>> 2c04efc616792c2fbcfa16cc17588597efae2b67
   margin-top: 0;
   margin-bottom: 1rem;
 }
 
+<<<<<<< HEAD
 .text img {
   margin: 20px;
 }
 
+=======
+>>>>>>> 2c04efc616792c2fbcfa16cc17588597efae2b67
 .phone-wrapper {
   flex: 0 0 auto;
   margin: 0;
@@ -95,22 +159,55 @@ a button {
   z-index: 2;
 }
 
+<<<<<<< HEAD
 /* Responsive widths matching your example */
 
+=======
+>>>>>>> 2c04efc616792c2fbcfa16cc17588597efae2b67
 @media (min-width: 1440px) {
   .text {
     width: 40%;
   }
 }
 
+<<<<<<< HEAD
 @media (max-width: 1024px) {
   .text {
     width: 55%;
+=======
+@media (max-width: 1675px) {
+  .text {
+    width: 60%;
+    color: #ffffff;
+  }
+  .text h1 {
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 1000px) {
+  .phone-wrapper {
+    width: 443px;
+    height: 245px;
+  }
+  .map-mask {
+    top: 15px;
+    left: 8px;
+    right: 8px;
+    bottom: 15px;
+>>>>>>> 2c04efc616792c2fbcfa16cc17588597efae2b67
   }
 }
 
 @media (max-width: 600px) {
   .text {
     width: 90%;
+<<<<<<< HEAD
+=======
+    color: #ffffff;
+  }
+  .text h1 {
+    color: #ffffff;
+>>>>>>> 2c04efc616792c2fbcfa16cc17588597efae2b67
   }
 }
