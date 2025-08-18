@@ -1,72 +1,7 @@
-<<<<<<< HEAD
-/* Import Plus Jakarta Sans font */
-=======
->>>>>>> 2c04efc616792c2fbcfa16cc17588597efae2b67
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
 
 .navbar-wrapper {
   position: sticky;
-<<<<<<< HEAD
-  top: 10px;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 1.5rem;
-  margin-top: 1rem;
-  gap: 1rem;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-}
-
-.navbar-logo {
-  height: 80px;
-}
-
-.navbar-nav {
-  background-color: #141411;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.75rem 1.5rem;
-  color: white;
-  font-weight: bold;
-  font-size: 1rem;
-  border-radius: 999px;
-  width: 66%;
-  max-width: 800px;
-  border: 1px solid white;
-  transition: border-color 0.5s ease, box-shadow 0.5s ease;
-}
-
-/* No border visible when at top */
-.navbar-nav:not(.navbar-scrolled) {
-  border-color: transparent;
-  box-shadow: none;
-}
-
-/* Border visible with subtle glow when scrolled */
-.navbar-nav.navbar-scrolled {
-  border-color: white;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-}
-
-.navbar-tabs {
-  display: flex;
-  gap: 2rem;
-  width: 100%;
-  justify-content: space-evenly;
-}
-
-.nav-tab {
-  padding: 0.4rem 0.8rem;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.nav-tab:hover {
-  background-color: #333;
-=======
   top: 0;
   width: 100%;
   z-index: 1000;
@@ -179,5 +114,4 @@
   .hamburger {
     display: flex;
   }
->>>>>>> 2c04efc616792c2fbcfa16cc17588597efae2b67
 }
