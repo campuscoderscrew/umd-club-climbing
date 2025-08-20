@@ -103,6 +103,13 @@ row-gap: 15px;
   }
 }
 
+@media (max-width: 260){
+  :root{
+  --slide-height: 60px;
+  --slide-width: 100px;
+  }
+}
+
 .sliders-container{
 row-gap: 10px;
 }
