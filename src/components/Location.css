@@ -8,11 +8,10 @@
   box-sizing: border-box;
   margin-top: 1000px;
   text-align: left;
-  /* keep left aligned for location */
 }
 
 a button {
-  background-color: #ffffff;
+  background-color: #b8dbd7;
   border: 0;
   border-radius: 999px;
   cursor: pointer;
@@ -29,6 +28,10 @@ a button {
   align-items: center;
   gap: 0px;
   padding-right: 25px;
+}
+
+a button:hover{
+  scale: 1.1;
 }
 
 .Location {
@@ -49,6 +52,13 @@ a button {
   color: #000000;
   margin: 0;
   line-height: 1.7;
+  opacity: 0;
+  transform: translate(-40px);
+  will-change: opacity, transform;
+}
+
+.text.animate{
+  animation: slide2  1s ease-out forwards;
 }
 
 .text h2 {
@@ -82,8 +92,37 @@ a button {
   width: 682px;
   height: 377px;
   overflow: hidden;
+  opacity: 0;
+  transform: translateY(40px);
+  will-change: opacity, transform;
+}
+.phone-wrapper.animate {
+  animation: slide 1s ease-out forwards;
 }
 
+@keyframes slide{ /* for the map to slide in from right to left*/
+  from {
+  opacity: 0;
+  transform: translate(180px);
+  }
+
+  to {
+  opacity: 1;
+  transform: translate(0);
+  }
+}
+
+@keyframes slide2{ /* for the map to slide in from left to right*/
+  from {
+      opacity: 0;
+      transform: translateX(-180px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate(0);
+    }
+}
 .phone-frame {
   position: absolute;
   inset: 0;
@@ -103,7 +142,7 @@ a button {
   border-radius: 32px;
   overflow: hidden;
   z-index: 2;
-}
+ }
 
 /* Responsive widths matching your example */
 @media (min-width: 1440px) {

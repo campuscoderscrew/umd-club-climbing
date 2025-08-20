@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { GoogleMap, LoadScript} from "@react-google-maps/api";
 import iphoneFrame from "../assets/iphone15.png";
 import pin from "../assets/Pin.png";
@@ -10,11 +10,37 @@ const center = { lat: 38.9936, lng: -76.9452 };
 const libraries = ["marker"];
 
 export default function Location() {
+  const phoneRef = useRef(null); // divs to animate
+  const textRef = useRef(null);
+
+  useEffect(() => { // handles animation when div is in sight
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+            
+          } else {
+            entry.target.classList.remove("animate"); // makes it replay
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    const targets = [phoneRef.current, textRef.current];
+    targets.forEach((target) => {
+      if (target) observer.observe(target);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
       <div className="location-container">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <div className="Location">
-          <div className="text">
+          <div className="text" ref={textRef}>
             <br />
             <h2>Location/Times</h2>
             <h1>Climbing Sessions</h1>
@@ -28,7 +54,7 @@ export default function Location() {
             </a>
           </div>
 
-          <div className="phone-wrapper">
+          <div className="phone-wrapper" ref={phoneRef}>
             <div className="map-mask">
               <LoadScript googleMapsApiKey={apiKey} libraries={libraries}>
                 <GoogleMap
