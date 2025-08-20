@@ -155,92 +155,133 @@
   z-index: 1;
 }
 
+/* =================== RESPONSIVE BREAKPOINTS =================== */
 
-
-
-@media (max-width: 768px) {
-      .join-container {
-        padding-left: 5%;
+/* Large Tablets (≤ 1024px) */
+@media all and (max-width: 1024px) {
+  .join-container {
+    margin-left: -2%;
   }
+
   .words {
-  min-width: 300px;
-  min-height: fit-content;
-}
-.hold1{
-  width: 30%; 
-  height: 30%; 
-}
-.hold2{
-  width: 30%; 
-  height: 30%; 
-}
-.button {
-  padding: 5px 15px;
-  font-size: 10px;
-}
-.jtj{
-  font-size: 36px;
-}
-.description{
-  font-size:16px;
+    min-width: 500px;
+  }
+
+  .hold1,
+  .hold2 {
+    width: 40%; 
+    height: 40%;
+  }
+
+  .logos {
+    width: 35%;
+  }
+
+  .logo1,
+  .logo2,
+  .logo3 {
+    width: 20%;
+    padding: 2%;
+  }
+
+  .jtj {
+    font-size: 46px;
+    line-height: 42px;
+  }
+
+  .description {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .button {
+    font-size: 18px;
+    padding: 8px 16px;
+  }
 }
 
+/* Tablets & Large Phones (≤ 768px) */
+@media all and (max-width: 768px) {
+  .join-container {
+    margin-left: -1%;
+  }
 
-}
-
-
-@media (max-width: 1024px) {
   .words {
-  min-width: 300px;
-  min-height: fit-content;
-}
-.hold1{
-  width: 35%; 
-  height: 35%; 
-  margin-left: 5%;
-}
-.hold2{
-  width: 35%; 
-  height: 35%; 
-}
-.button {
-  padding: 5px 15px;
-  font-size: 15px;
-}
-.jtj{
-  font-size: 36px;
-}
-.description{
-  font-size:24px;
+    min-width: 400px;
+  }
+
+  .hold1,
+  .hold2 {
+    width: 25%; 
+    height: 25%;
+  }
+
+  .logos {
+    width: 45%;
+  }
+
+  .logo1,
+  .logo2,
+  .logo3 {
+    width: 18%;
+    padding: 2%;
+  }
+
+  .jtj {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .button {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
 }
 
+/* Small Phones (≤ 480px) */
+@media all and (max-width: 480px) {
+  .join-container {
+    margin-left: 0;
+    margin-right: 50px;
+  }
 
-}
-
-@media (max-width: 1200px) {
   .words {
-  min-width: 300px;
-  min-height: fit-content;
-}
-.hold1{
-  width: 35%; 
-  height: 35%; 
-  margin-left: 3%;
-}
-.hold2{
-  width: 35%; 
-  height: 35%; 
-}
-.button {
-  padding: 5px 15px;
-  font-size: 15px;
-}
-.jtj{
-  font-size: 36px;
-}
-.description{
-  font-size:18px;
-}
+    min-width: 300px;
+  }
 
+  .hold1,
+  .hold2 {
+    display: none;
+  }
 
+  .logos {
+    width: 60%;
+  }
+
+  .logo1,
+  .logo2,
+  .logo3 {
+    width: 15%;
+    padding: 1%;
+  }
+
+  .jtj {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .description {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
 }
