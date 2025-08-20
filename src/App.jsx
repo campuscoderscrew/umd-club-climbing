@@ -39,8 +39,10 @@ function App() {
       </section>
       <Icon/>
 
-        <Location />
-  
+      <section id="location">
+      <Location />
+      </section>
+
       <section id="join">
         <JoinTheJourney />
       </section>
