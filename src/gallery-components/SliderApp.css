@@ -5,13 +5,7 @@
 --gap: 0px;
 --time: 50s;
 
-
-
-
 }
-
-
-
 
 ::before, *::after {
 margin: 0;
@@ -19,18 +13,12 @@ padding: 0;
 box-sizing: border-box;
 }
 
-
-
-
 img{
 display: block;
 width: 100%;
 height: 100%;
 object-fit: cover;
 }
-
-
-
 
 body{
 display: flex;
@@ -69,8 +57,6 @@ background-image: radial-gradient(
 }
 
 
-
-
 .sliders-container{
   position: relative;
   display: flex;
@@ -104,15 +90,9 @@ background-image: radial-gradient(
   }
 }
 
-
-
-
 .sliders-container{
 row-gap: 15px;
 }
-
-
-
 
 @media (max-width: 860px){
 :root{
@@ -120,18 +100,12 @@ row-gap: 15px;
 }
 }
 
-
-
-
 @media (max-width: 460){
   :root{
   --slide-height: 90px;
   --slide-width: 180px;
   }
 }
-
-
-
 
 .sliders-container{
 row-gap: 10px;
