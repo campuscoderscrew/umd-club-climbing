@@ -1,84 +1,186 @@
-/* Icon.css */
+
 
 .icon-container {
-  position: relative; /* Create positioning context */
+  position: relative;
   width: 100%;
-  min-height: 400px; /* Ensure enough height for positioning */
+  min-height: 400px;
   display: flex;
-  justify-content: center; /* Center horizontally */
-  margin-top: 100px; /* Default margin */
+  justify-content: center;
+  margin-top: 100px;
 }
 
 
+.mountain, .carabiner, .globe {
+  transition: transform 0.5s ease, bottom 0.5s ease;
+}
 
-/* Mountain positioning */
+.mountain:hover, .carabiner:hover, .globe:hover {
+  transform: scale(1.2);
+}
+
+
 .mountain {
   position: absolute;
-  left: 15%; /* Position from left edge */
-  bottom: 55%; /* Position from bottom */
+  left: 15%;
+  bottom: 55%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: auto; /* Don't constrain width */
-  transition: 0.5s;
-}
-
-.mountain:hover{
-  transform: scale(1.2);
+  width: auto;
 }
 
 .mountain img {
-    transform: scale(1.4);
+  width: min(12vw, 100px); 
+  height: min(12vw, 100px); 
+  object-fit: contain;
+  transform: scale(1.4); 
 }
 
-/* Carabiner positioning */
 .carabiner {
   position: absolute;
-  bottom: 20%; /* Position higher than mountain */
+  bottom: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: auto;
-  transform: translateY(-50%); /* Center vertically */
-  transition: 0.5s;
+  transform: translateY(-50%);
 }
 
-.carabiner:hover{
-  transform: scale(1.2);
-  position:absolute;
-  bottom:150px;
+.carabiner:hover {
+  transform: translateY(-50%) scale(1.2); 
+  bottom: 80px;
 }
 
-/* Globe positioning */
+.carabiner img {
+  width: min(10vw, 100px);
+  height: min(10vw, 100px);
+  object-fit: contain;
+}
+
+
 .globe {
   position: absolute;
-  right: 15%; /* Position from right edge */
-  bottom: 55%; /* Same vertical position as mountain */
+  right: 15%;
+  bottom: 55%;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: auto;
-  transition: 0.5s;
-
 }
 
-.globe:hover{
-  transform: scale(1.2);
+.globe img {
+  width: min(12vw, 100px);
+  height: min(12vw, 100px);
+  object-fit: contain;
 }
 
-/* Image styling */
-.icon-container img {
-  width: 100px; /* Set consistent size */
-  height: 100px; /* Maintain aspect ratio */
-  object-fit: contain; /* Ensure entire image is visible */
-}
-
-/* Heading styling */
+/* Heading styling with responsive font size */
 .icon-container h3 {
   font-family: "Inter", sans-serif;
   font-weight: bold;
-  font-size: 1.2rem;
-  width: 220px;
+  font-size: clamp(0.9rem, 2vw, 1.2rem); 
+  width: min(220px, 30vw); 
   text-align: center;
-  margin-top: 15px; /* Space between icon and text */
+  margin-top: 15px;
+  line-height: 1.3;
+}
+
+/* Media queries for specific breakpoints */
+@media (max-width: 1024px) {
+  .mountain {
+    left: 10%;
+    bottom: 50%;
+  }
+  
+  .globe {
+    right: 10%;
+    bottom: 50%;
+  }
+  
+  .carabiner {
+    bottom: 15%;
+  }
+}
+
+@media (max-width: 720px) {
+  .mountain {
+    left: 5%;
+    bottom: 40%;
+  }
+  
+  .globe {
+    right: 5%;
+    bottom: 45%;
+  }
+  
+  .carabiner {
+    bottom: 10%;
+  }
+  
+  .mountain img, .globe img, .carabiner img {
+    width: min(15vw, 100px);
+    height: min(15vw, 100px);
+  }
+  
+  
+  .icon-container h3 {
+    font-size: clamp(0.8rem, 1.8vw, 1rem);
+    width: min(180px, 25vw);
+    color: #4F9891;
+
+  }
+
+  
+}
+
+@media (max-width: 480px) {
+  .icon-container {
+    min-height: 300px;
+    margin-top: 50px;
+  }
+  
+  .mountain {
+    left: 2%;
+    bottom: 40%;
+  }
+  
+  .globe {
+    right: 2%;
+    bottom: 40%;
+  }
+  
+  .carabiner {
+    bottom: 5%;
+    transform: translateY(0); 
+  }
+  
+  .carabiner:hover {
+    transform: scale(1.2);
+    bottom: 100px;
+  }
+  
+  .mountain img, .globe img, .carabiner img {
+    width: 70px;
+    height: 70px;
+  }
+  
+
+  
+  .icon-container h3 {
+    font-size: 0.8rem;
+    width: 150px;
+    margin-top: 10px;
+    color: #4F9891;
+  }
+}
+
+
+.mountain, .carabiner, .globe {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+* {
+  transition: transform 0.3s ease;
 }
