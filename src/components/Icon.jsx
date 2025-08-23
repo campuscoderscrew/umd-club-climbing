@@ -1,7 +1,7 @@
 import './Icon.css';
-import Mountain from '../assets/mountain_icon.png';
-import Globe from '../assets/globe_icon.png';
-import Carabiner from '../assets/carabiner_icon.png';
+import Mountain from '../assets/mountain_icon.svg';
+import Globe from '../assets/globe_icon.svg';
+import Carabiner from '../assets/carabiner_icon.svg';
   
 
 const Icon = ({ marginTop = '100px'}) => {
