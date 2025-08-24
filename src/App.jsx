@@ -7,7 +7,7 @@ import NavBar from './components/NavBar';
 import Icon from './components/Icon';
 import VideoSection from './components/VideoSection';
 import Join from './components/Join';
-import SliderApper from './components/SliderApper';
+import SliderApp from './gallery-components/SliderApp';
 
 
 function App() {
@@ -57,7 +57,7 @@ function App() {
           titleColor="#FFFFFF"
           descColor="#A5ABB6"
         />
-        <SliderApper />
+        <SliderApp />
 
      
         <Join></Join>

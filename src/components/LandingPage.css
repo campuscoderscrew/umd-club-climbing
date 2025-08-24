@@ -252,3 +252,202 @@ html, body {
   
 
 }
+@media (max-width: 455px) {
+  
+  .hero-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: .5rem 1rem;
+    gap: .2rem;
+    min-height: auto;
+  }
+
+  .grid-top-left {
+    top: -5px;
+  }
+
+  .grid-top-right {
+    top: -5px;
+    right: -5px;
+  }
+
+  .grid-bottom-left {
+    width: 220px;
+    left: -15px;
+  }
+  
+  .grid-bottom-right {
+    top: 0;
+    left: 0%;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .club-title {
+    margin-top: 1rem;
+    font-size: 2.0rem;
+  }
+
+  .hero-subtitle {
+    margin-top: 1rem;
+    font-size: 2.0rem;
+  }
+
+  .small-hold {
+    width: 100px;
+    top: -5%;
+    left: -8%;
+  }
+  
+  .big-hold {
+    width: 150px;
+    bottom: -20%;
+    left: 25%;
+  }
+  
+  .teal-hold-1 {
+    width: 200px;
+    top: -45%;
+    right: -55%;
+  }
+  
+  .teal-hold-2 {
+    width: 200px;
+    bottom: -55%;
+    right: 15%;
+  }
+  
+
+}
+@media (max-width: 407px) {
+  
+  .hero-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: .5rem 1rem;
+    gap: .2rem;
+    min-height: auto;
+  }
+
+  .grid-top-left {
+    top: -5px;
+  }
+
+  .grid-top-right {
+    top: -5px;
+    right: -5px;
+  }
+
+  .grid-bottom-left {
+    width: 220px;
+    left: -15px;
+  }
+  
+  .grid-bottom-right {
+    top: 0;
+    left: 0%;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .club-title {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+  }
+
+  .small-hold {
+    width: 90px;
+    top: -5%;
+    left: -13%;
+  }
+  
+  .big-hold {
+    width: 130px;
+    bottom: -20%;
+    left: 25%;
+  }
+  
+  .teal-hold-1 {
+    width: 180px;
+    top: -45%;
+    right: -55%;
+  }
+  
+  .teal-hold-2 {
+    width: 180px;
+    bottom: -55%;
+    right: 15%;
+  }
+  
+
+}
+
+@media (max-width: 389px){
+  .hero-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 1rem 0rem;
+    gap: .2rem;
+    min-height: auto;
+  }
+
+  .grid-top-left {
+    top: -28px;
+    left: 25px;
+  }
+
+  .grid-top-right {
+    top: -25px;
+    right: 35px;
+  }
+
+  .grid-bottom-left {
+    width: 220px;
+    left: -15px;
+  }
+
+  .grid-bottom-right {
+    top: 0;
+    left: -7%;
+  }
+
+  .club-title {
+    margin-top: .5rem;
+    font-size: 1.7rem;
+  }
+
+  .hero-subtitle {
+    margin-top: 0.8rem;
+    font-size: 1.7rem;
+  }
+
+  .small-hold {
+    width: 80px;
+    top: 3%;
+    left: 2%;
+  }
+
+  .big-hold {
+    width: 130px;
+    bottom: -30%;
+    left: 40%;
+  }
+
+  .teal-hold-1 {
+    width: 170px;
+    top: -45%;
+    left: 35%;
+  }
+
+  .teal-hold-2 {
+    width: 160px;
+    bottom: -45%;
+    right: 25%;
+  }
+
+}
