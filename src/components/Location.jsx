@@ -4,7 +4,7 @@ import iphoneFrame from "../assets/iphone15.png";
 import pin from "../assets/Pin.png";
 import "./Location.css";
 
-const apiKey = import.meta.env.VITE_KEY; // .env file must be in root directory
+const apiKey = import.meta.env.VITE_KEY;
 const mapId = import.meta.env.VITE_MAP_ID;
 const center = { lat: 38.9936, lng: -76.9452 };
 const libraries = ["marker"];
@@ -39,7 +39,6 @@ export default function Location() {
     <div className="location-container" ref={sectionRef}>
       <div className={`Location ${inView ? "in-view" : ""}`}>
         <div className="text">
-          <br />
           <h2>Location/Times</h2>
           <h1>Climbing Sessions</h1>
           <span className="info">
@@ -47,8 +46,7 @@ export default function Location() {
             outdoor mountain adventures. Our club meets every Thursday and
             Sunday to connect and climb.
           </span>
-
-          <br />
+ <br />
           <a
             href="https://www.google.com/maps/place/Geary+F.+Eppley+Recreation+Center,+4128+Valley+Dr,+College+Park,+MD+20742/@38.9935511,-76.9496274,16.31z"
             target="_blank"
