@@ -11,7 +11,6 @@ import tealHold2 from '../assets/teal_hold_2.png';
 const LandingPage = () => {
   return (
     <div className="landing-page">
-      {/* Hero Container - 2x2 Grid Layout */}
       <div className="hero-container">
         {/* Top Left - UMD CLUB CLIMBING */}
         <div className="grid-top-left">
@@ -28,31 +27,17 @@ const LandingPage = () => {
             src={smallHold} 
             alt="Small Climbing Hold" 
             className="climbing-hold small-hold"
-            whileHover={{ 
-              scale: 1.1,
-              rotate: -5,
-              y: -10
-            }}
-            transition={{ 
-              type: "spring", 
-              stiffness: 300, 
-              damping: 20 
-            }}
+            whileHover={{ scale: 1.1, rotate: -5, y: -10 }}
+            whileTap={{ scale: 0.95, rotate: 0, y: 0 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
           />
           <motion.img 
             src={bigHold} 
             alt="Large Climbing Hold" 
             className="climbing-hold big-hold"
-            whileHover={{ 
-              scale: 1.15,
-              rotate: 8,
-              y: -15
-            }}
-            transition={{ 
-              type: "spring", 
-              stiffness: 300, 
-              damping: 20 
-            }}
+            whileHover={{ scale: 1.15, rotate: 8, y: -15 }}
+            whileTap={{ scale: 0.95, rotate: 0, y: 0 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
           />
         </div>
         
@@ -62,33 +47,17 @@ const LandingPage = () => {
             src={tealHold1} 
             alt="Teal Climbing Hold 1" 
             className="climbing-hold teal-hold-1"
-            whileHover={{ 
-              scale: 1.08,
-              rotate: -3,
-              x: -5,
-              y: -8
-            }}
-            transition={{ 
-              type: "spring", 
-              stiffness: 300, 
-              damping: 20 
-            }}
+            whileHover={{ scale: 1.08, rotate: -3, x: -5, y: -8 }}
+            whileTap={{ scale: 0.95, rotate: 0, x: 0, y: 0 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
           />
           <motion.img 
             src={tealHold2} 
             alt="Teal Climbing Hold 2" 
             className="climbing-hold teal-hold-2"
-            whileHover={{ 
-              scale: 1.12,
-              rotate: 15, // adds to existing 10deg rotation in CSS
-              x: 8,
-              y: -12
-            }}
-            transition={{ 
-              type: "spring", 
-              stiffness: 300, 
-              damping: 20 
-            }}
+            whileHover={{ scale: 1.12, rotate: 15, x: 8, y: -12 }}
+            whileTap={{ scale: 0.95, rotate: 0, x: 0, y: 0 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
           />
         </div>
         
@@ -101,9 +70,6 @@ const LandingPage = () => {
           </h2>
         </div>
       </div>
-
-      {/* Mission Container: view App.jsx & Text section */}
-     
     </div>
   );
 };
