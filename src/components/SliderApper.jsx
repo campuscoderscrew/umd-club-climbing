@@ -60,7 +60,8 @@ const SliderApp = () => {
     lastCurrentX: 0,
     dragDistance: 0,
     hasActuallyDragged: false,
-    isMobile: false
+    isMobile: false,
+    isHorizontallyDragging: false,
   });
 
   const trackRef = useRef(null);
@@ -133,23 +134,26 @@ const SliderApp = () => {
     });
   }, []);
 
-  const updateMovingState = useCallback(() => {
-    setState(prev => {
-      const velocity = Math.abs(prev.currentX - prev.lastCurrentX);
-      const isSlowEnough = velocity < 0.1;
-      const hasBeenStillLongEnough = Date.now() - prev.lastScrollTime > 200;
-      const isMoving = prev.hasActuallyDragged || !isSlowEnough || !hasBeenStillLongEnough;
+const updateMovingState = useCallback(() => {
+  setState(prev => {
+    const velocity = Math.abs(prev.currentX - prev.lastCurrentX);
+    const isSlowEnough = velocity < 0.1;
+    const hasBeenStillLongEnough = Date.now() - prev.lastScrollTime > 200;
 
-      document.documentElement.style.setProperty('--slider-moving', isMoving ? '1' : '0');
+    // Only mark as moving when dragging/scrolling horizontally
+    const isMoving =
+      prev.isHorizontallyDragging && (prev.hasActuallyDragged || !isSlowEnough || !hasBeenStillLongEnough);
 
-      return {
-        ...prev,
-        velocity,
-        lastCurrentX: prev.currentX,
-        isMoving
-      };
-    });
-  }, []);
+    document.documentElement.style.setProperty('--slider-moving', isMoving ? '1' : '0');
+
+    return {
+      ...prev,
+      velocity,
+      lastCurrentX: prev.currentX,
+      isMoving
+    };
+  });
+}, []);
 
   const animate = useCallback(() => {
     setState(prev => {
@@ -217,23 +221,26 @@ const handleTouchMove = useCallback((e) => {
         targetX: prev.lastX + deltaX * 1.5,
         dragDistance: newDragDistance,
         hasActuallyDragged: newDragDistance > 5,
-        lastScrollTime: Date.now()
+        lastScrollTime: Date.now(),
+        isHorizontallyDragging: true   // 👈 mark as horizontal
       };
     }
 
-    // Vertical scroll → do not touch state at all
-    return prev;
+    // Vertical scroll → do not set horizontal flag
+    return { ...prev, isHorizontallyDragging: false };
   });
 }, []);
 
 
 
-  const handleTouchEnd = useCallback(() => {
-    setState(prev => ({ ...prev, isDragging: false }));
-    setTimeout(() => {
-      setState(prev => ({ ...prev, hasActuallyDragged: false }));
-    }, 100);
-  }, []);
+
+// handleTouchEnd
+const handleTouchEnd = useCallback(() => {
+  setState(prev => ({ ...prev, isDragging: false, isHorizontallyDragging: false }));
+  setTimeout(() => {
+    setState(prev => ({ ...prev, hasActuallyDragged: false }));
+  }, 100);
+}, []);
 
   const handleMouseDown = useCallback((e) => {
     e.preventDefault();
