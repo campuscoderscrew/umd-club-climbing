@@ -93,7 +93,7 @@ const SliderApp = () => {
   }, [checkMobile]);
 
   const updateSlidePositions = useCallback(() => {
-    if (!trackRef.current) return;
+    
     
     const sequenceWidth = state.slideWidth * sliderData.length;
 
