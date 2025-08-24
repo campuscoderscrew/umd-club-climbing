@@ -8,7 +8,6 @@ import Icon from './components/Icon';
 import VideoSection from './components/VideoSection';
 import Join from './components/Join';
 import SliderApper from './components/SliderApper';
-import Accordion from './components/Accordion';
 
 
 function App() {
