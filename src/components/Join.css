@@ -1,0 +1,104 @@
+.join-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.join-content {
+  position: relative;
+  z-index: 1;
+  width: 70%;
+  text-align: center;
+  padding: 2rem;
+  top: 10%;
+  margin-bottom: 150px;
+}
+
+/* Right background anchored */
+.join-bg {
+  position: absolute;
+  right: -14%;       
+  height: clamp(100px, 35vw, 800px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Left background anchored */
+.join-bg-left {
+  position: absolute;
+  left: -10%;
+  height: clamp(120px, 38vw, 800px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Icons row */
+.join-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  transition: transform 0.3s;
+}
+
+.join-icon {
+  width: clamp(40px, 9vw, 60px);
+  height: clamp(40px, 9vw, 60px);
+  margin-left: -20px; /* overlap amount */
+  transition: transform 0.3s, margin-left 0.3s;
+  cursor:pointer;
+}
+
+/* Remove left margin on first icon */
+.join-icon:first-child {
+  margin-left: 0;
+}
+
+/* Initial tilts for 3 icons */
+.join-icon:nth-child(1) {
+  transform: rotate(-10deg);
+}
+.join-icon:nth-child(2) {
+  transform: rotate(0deg);
+}
+.join-icon:nth-child(3) {
+  transform: rotate(10deg);
+}
+
+/* On hover: spread out and untilt */
+.join-icons:hover .join-icon:nth-child(1) {
+  transform: rotate(0deg) translateX(-40px);
+}
+.join-icons:hover .join-icon:nth-child(2) {
+  transform: rotate(0deg) translateX(0);
+}
+.join-icons:hover .join-icon:nth-child(3) {
+  transform: rotate(0deg) translateX(40px);
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .join-content {
+    padding: 1rem;
+    width: 65%;
+    margin-bottom: 70px;
+  }
+  .join-icons {
+    margin-top: 0px;
+    gap: 1rem;
+  }
+  .join-icon{
+    margin-left: -30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .join-content {
+    margin-bottom: 100px;
+  }
+}

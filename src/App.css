@@ -1,0 +1,53 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #141411;
+  min-height: 100vh;
+  background-image: url('/public/Group_2.png'); /* public path */
+  background-size: 100% auto; /* 100% width, auto height */
+  background-repeat: no-repeat;
+  background-position: center -150px;
+  scroll-behavior: smooth;
+}
+#about{
+  margin-top: 25%;
+}
+
+/* iPhone / small screens */
+@media (max-width: 800px) {
+  html, body {
+    background-position: center 0%; /* adjust this value */
+  }
+  
+}
+@media (min-width: 618px) and (max-width: 650px) {
+  #about {
+    margin-top: -15%;
+  }
+}
+@media (min-width: 600px) and (max-width: 617px) {
+  #about {
+    margin-top: -18%;
+  }
+}
+
+
+@media (max-width: 520px) {
+  #about {
+    margin-top: -10%
+  }
+}
+
+@media (max-width: 450px) {
+  #about {
+    margin-top: -20%
+  }
+}
+@media (max-width: 390px) {
+  #about {
+    margin-top: -26%
+  }
+}
+
+
+
