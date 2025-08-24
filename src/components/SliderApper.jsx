@@ -285,34 +285,36 @@ const handleTouchMove = useCallback((e) => {
     }
   }, []);
 
-  // Initialize and cleanup
   useEffect(() => {
-    initializeSlides();
-    animationRef.current = requestAnimationFrame(animate);
+  initializeSlides();
+  animationRef.current = requestAnimationFrame(animate);
 
-    const slider = document.querySelector('.slider');
-    if (slider) {
-      slider.addEventListener('wheel', handleWheel, { passive: false });
-      slider.addEventListener('dragstart', (e) => e.preventDefault());
+  const slider = document.querySelector('.slider');
+  if (slider) {
+    slider.addEventListener('wheel', handleWheel, { passive: false });
+    slider.addEventListener('touchmove', handleTouchMove, { passive: false }); // 👈 key change
+    slider.addEventListener('dragstart', (e) => e.preventDefault());
+  }
+
+  document.addEventListener('mousemove', handleMouseMove);
+  document.addEventListener('mouseup', handleMouseUp);
+  window.addEventListener('resize', handleResize);
+
+  return () => {
+    if (animationRef.current) {
+      cancelAnimationFrame(animationRef.current);
     }
+    if (slider) {
+      slider.removeEventListener('wheel', handleWheel);
+      slider.removeEventListener('touchmove', handleTouchMove); // cleanup
+      slider.removeEventListener('dragstart', (e) => e.preventDefault());
+    }
+    document.removeEventListener('mousemove', handleMouseMove);
+    document.removeEventListener('mouseup', handleMouseUp);
+    window.removeEventListener('resize', handleResize);
+  };
+}, [animate, handleWheel, handleMouseMove, handleMouseUp, handleResize, initializeSlides, handleTouchMove]);
 
-    document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseup', handleMouseUp);
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
-      if (slider) {
-        slider.removeEventListener('wheel', handleWheel);
-        slider.removeEventListener('dragstart', (e) => e.preventDefault());
-      }
-      document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseup', handleMouseUp);
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [animate, handleWheel, handleMouseMove, handleMouseUp, handleResize, initializeSlides]);
 
   // Render slides
   const renderSlides = () => {
@@ -471,7 +473,6 @@ const handleTouchMove = useCallback((e) => {
       <div 
         className="slider"
         onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
         onMouseDown={handleMouseDown}
         onMouseLeave={handleMouseUp}
