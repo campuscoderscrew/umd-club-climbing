@@ -202,19 +202,18 @@ const handleTouchMove = useCallback((e) => {
     if (!prev.isDragging) return prev;
 
     const touch = e.touches[0];
+    const startY = prev.startY ?? touch.clientY;  // don't mutate prev
     const deltaX = touch.clientX - prev.startX;
-    const deltaY = touch.clientY - (prev.startY || touch.clientY);
-
-    // Set startY if it's not set
-    if (prev.startY === undefined) prev.startY = touch.clientY;
+    const deltaY = touch.clientY - startY;
 
     // Only drag horizontally if horizontal movement is larger than vertical
     if (Math.abs(deltaX) > Math.abs(deltaY)) {
-      e.preventDefault(); // Prevent vertical scrolling
+      e.preventDefault(); // Prevent vertical scrolling when dragging horizontally
       const newDragDistance = Math.abs(deltaX);
 
       return {
         ...prev,
+        startY, // immutably set startY
         targetX: prev.lastX + deltaX * 1.5,
         dragDistance: newDragDistance,
         hasActuallyDragged: newDragDistance > 5,
@@ -222,9 +221,14 @@ const handleTouchMove = useCallback((e) => {
       };
     }
 
-    return prev; // Let vertical scroll happen
+    // For vertical scroll → just update startY safely, no drag
+    return {
+      ...prev,
+      startY
+    };
   });
 }, []);
+
 
 
   const handleTouchEnd = useCallback(() => {
