@@ -47,7 +47,7 @@ html, body {
 
 @media(max-width:574px){
   html,body{
-    background-position: center -150px, center calc(100% + 0px);
+    background-position: center 0%, center calc(100% + 0px);
   }
 }
 @media (max-width: 480px) {
@@ -60,6 +60,12 @@ html, body {
   html, body {
     background-size: 100% auto, 140% auto;
     background-position: center 0%, center calc(100% + 30px); /* adjust this value */
+  }
+  
+}
+@media (max-width: 430px) {
+  html, body {
+    background-position: center 1.5%, center calc(100% + 30px); /* adjust this value */
   }
   
 }
@@ -82,7 +88,7 @@ html, body {
 }
 @media (max-width: 574px) and (min-width: 481px) {
   #about {
-    margin-top: -25%
+    margin-top: 0%
   }
 }
 @media (max-width: 480px) {
