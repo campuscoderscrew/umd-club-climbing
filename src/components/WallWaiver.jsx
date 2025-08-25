@@ -25,7 +25,7 @@ const WallWaiver = () => {
   return (
     <div className="wall-waiver-container">
       <div className="wall-waiver-logo">
-        <img src="//\logo_2.jpg" alt="Club Logo" />
+        <img src="/logo_2.jpg" alt="Club Logo" />
       </div>
       <h2 className="wall-waiver-heading">Wall Waiver</h2>
       <p className="wall-waiver-text">
