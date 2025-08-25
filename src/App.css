@@ -3,20 +3,70 @@ html, body {
   padding: 0;
   background-color: #141411;
   min-height: 100vh;
-  background-image: url('/public/Group_2.png'); /* public path */
-  background-size: 100% auto; /* 100% width, auto height */
-  background-repeat: no-repeat;
-  background-position: center -150px;
+
+  /* Multiple backgrounds: top image first, bottom image second */
+  background-image: url('/public/Group_2.png'), url('src/assets/Group_9.png');
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% auto, 100% auto;
+  background-position: center -150px, center calc(100% + 700px);
+
   scroll-behavior: smooth;
 }
+
 #about{
   margin-top: 25%;
+}
+@media(max-width:1440px){
+  html,body{
+    background-position: center -150px, center calc(100% + 500px);
+  }
+}
+@media(max-width:1330px){
+  html,body{
+    background-position: center -150px, center calc(100% + 300px);
+  }
+}
+@media(max-width:1220px){
+  html,body{
+    background-position: center -150px, center calc(100% + 200px);
+  }
+}
+@media(max-width:830px){
+  html,body{
+    background-position: center -150px, center calc(100% + 100px);
+  }
 }
 
 /* iPhone / small screens */
 @media (max-width: 800px) {
   html, body {
-    background-position: center 0%; /* adjust this value */
+    background-position: center 0%, center calc(100% + 50px); /* adjust this value */
+  }
+  
+}
+
+@media(max-width:574px){
+  html,body{
+    background-position: center -150px, center calc(100% + 0px);
+  }
+}
+@media (max-width: 480px) {
+  html, body {
+    background-position: center 0%, center calc(100% + -20px); /* adjust this value */
+  }
+  
+}
+@media (max-width: 480px) {
+  html, body {
+    background-size: 100% auto, 140% auto;
+    background-position: center 0%, center calc(100% + 30px); /* adjust this value */
+  }
+  
+}
+@media (max-width: 400px) {
+  html, body {
+    background-size: 100% auto, 160% auto;
+    background-position: center 0%, center calc(100% + 0px); /* adjust this value */
   }
   
 }
@@ -30,17 +80,21 @@ html, body {
     margin-top: -18%;
   }
 }
-
-
-@media (max-width: 520px) {
+@media (max-width: 574px) and (min-width: 481px) {
+  #about {
+    margin-top: -25%
+  }
+}
+@media (max-width: 480px) {
   #about {
     margin-top: -10%
   }
 }
 
+
 @media (max-width: 450px) {
   #about {
-    margin-top: -20%
+    margin-top: -10%
   }
 }
 @media (max-width: 390px) {

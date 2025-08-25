@@ -8,6 +8,7 @@ import Icon from './components/Icon';
 import VideoSection from './components/VideoSection';
 import Join from './components/Join';
 import SliderApp from './gallery-components/SliderApp';
+import SlideAppV1 from './components/SliderAppv1'
 
 
 function App() {
@@ -34,11 +35,11 @@ function App() {
           highlight="Services"
           title="Your Climbing Experience"
           description="Open to everyone of varying skill level"
-          marginTop="10%"
+          marginTop="5vh"
         />
       </section>
       <Icon></Icon>
-      <div style={{ height: "800px", width: "100%",marginTop:"5%", display: "flex",justifyContent: "center" }}>
+      <div style={{ height: "800px", width: "100%",marginTop:"5vh", display: "flex",justifyContent: "center" }}>
   <Text
     highlight="Board"
     title="Our Board Members"
@@ -53,11 +54,11 @@ function App() {
           highlight="Gallery"
           title="Our Outdoor Adventures"
           description="Where our club has climbed, explored, and enjoyed the great outdoors."
-          marginTop="0px"
+          marginTop="5vh"
           titleColor="#FFFFFF"
           descColor="#A5ABB6"
         />
-        <SliderApp />
+        <SlideAppV1/>
 
      
         <Join></Join>

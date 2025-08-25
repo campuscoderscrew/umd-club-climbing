@@ -1,5 +1,6 @@
 import React from 'react';
 import './WallWaiver.css';
+import Footer from './Footer';
 
 const WaiverIcon = () => (
   <svg
@@ -23,6 +24,9 @@ const WaiverIcon = () => (
 const WallWaiver = () => {
   return (
     <div className="wall-waiver-container">
+      <div className="wall-waiver-logo">
+        <img src="src/assets/logo_2.jpg" alt="Club Logo" />
+      </div>
       <h2 className="wall-waiver-heading">Wall Waiver</h2>
       <p className="wall-waiver-text">
         To be a part of the club and join us for any climbing activities, you must sign the wall waiver.
@@ -32,7 +36,6 @@ const WallWaiver = () => {
         <WaiverIcon />
         Sign Waiver
       </button>
-     <hr className="wall-waiver-divider" />
       <p className="wall-waiver-footer">
         © 2025 CCC. Built with React. All rights reserved.
       </p>

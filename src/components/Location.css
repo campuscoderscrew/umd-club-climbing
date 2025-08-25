@@ -5,6 +5,7 @@
   position: relative;
   padding: 5% 8%;
   text-align: left;
+  margin-top: 5vh;
 }
 
 /* NEW: Map link button styling */
@@ -41,6 +42,9 @@
   justify-content: space-between;
   gap: 2rem;
   width: 100%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 .text {
@@ -52,8 +56,6 @@
   margin: 0;
   line-height: 1.7;
   width: 100%;
-  opacity: 0; /* Initially hidden for animation */
-  animation: fadeInUp 1.5s ease-in-out forwards; /* Animation for fading in and moving up */
 }
 
 .text h2 {
@@ -68,7 +70,6 @@
   display: inline-block;
   margin-bottom: 2px;
   opacity: 0; /* Initially hidden for animation */
-  animation: fadeInUp 1.5s ease-in-out 0.3s forwards; /* Animation with delay */
 }
 
 .text h1 {
@@ -83,9 +84,41 @@
   font-weight: 700;
   color: #2D3139;
   opacity: 0; /* Initially hidden for animation */
-  animation: fadeInUp 1.5s ease-in-out 0.5s forwards; /* Animation with delay */
+}
+.Location.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }
 
+/* Children initial state */
+.Location .text h2,
+.Location .text h1,
+.Location .text .info {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Staggered fade/slide for highlight text */
+.Location.in-view .text h2 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+/* Title fade/slide */
+.Location.in-view .text h1 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+/* Info/paragraph fade/slide */
+.Location.in-view .text .info {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
 /* Keyframes for fade-in and upward animation */
 @keyframes fadeInUp {
   0% {
@@ -120,12 +153,13 @@
 .map-mask {
   position: absolute;
   top: 35px;
-  left: 10px;
-  right: 10px;
-  bottom: 25px;
+  left: 16px;
+  right: 16px;
+  bottom: 27px;
   border-radius: 32px;
   overflow: hidden;
   z-index: 2;
+  
 }
 
 .info {
