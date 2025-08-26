@@ -3,6 +3,7 @@
   margin: 40px auto;
   padding: 0;
   background: transparent;
+  overflow:visible;
 }
 
 .instagram-handle {
@@ -27,6 +28,11 @@
 
   /* Horizontal scroll for mobile */
   overflow-x: auto;
+  overflow-y: visible;
+   padding-top: 12px;   /* space for hover */
+  padding-bottom: 12px;
+  margin-top: -12px;   /* pull layout back up */
+  margin-bottom: -12px;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
 }

@@ -46,11 +46,14 @@ function App() {
     marginTop="0px"
   />
 </div>
+    <section id="location">
+      <Location />
+    </section>
 
-        <Location />
   
 
-  <Text
+  
+        <section id="gallery"><Text
           highlight="Gallery"
           title="Our Outdoor Adventures"
           description="Where our club has climbed, explored, and enjoyed the great outdoors."
@@ -58,11 +61,13 @@ function App() {
           titleColor="#FFFFFF"
           descColor="#A5ABB6"
         />
-        <SlideAppV1/>
+<SliderApp/></section>
+        
 
-     
-        <Join></Join>
-      
+     <section id="join">
+      <Join></Join>
+     </section>
+       
 
       <WallWaiver></WallWaiver>
     </>

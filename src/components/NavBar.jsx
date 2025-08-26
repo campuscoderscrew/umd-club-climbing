@@ -17,6 +17,7 @@ const NavBar = () => {
     { label: 'About', link: '#about' },
     { label: 'Services', link: '#services' },
     { label: 'Location/Times', link: '#location' },
+    { label: 'Gallery', link: '#gallery' },
     { label: 'Join Us', link: '#join' }
   ];
 
