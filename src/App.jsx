@@ -1,20 +1,45 @@
-import './App.css';
-import LandingPage from './components/LandingPage';
-import Text from './components/Text';
-import Location from './components/Location';
-import WallWaiver from './components/WallWaiver';
-import NavBar from './components/NavBar';
-import Icon from './components/Icon';
-import VideoSection from './components/VideoSection';
-import Join from './components/Join';
-import SliderApp from './gallery-components/SliderApp';
-import SlideAppV1 from './components/SliderAppv1'
-
+import { useState, useEffect } from "react";
+import "./App.css";
+import LandingPage from "./components/LandingPage";
+import Text from "./components/Text";
+import Location from "./components/Location";
+import WallWaiver from "./components/WallWaiver";
+import NavBar from "./components/NavBar";
+import Icon from "./components/Icon";
+import VideoSection from "./components/VideoSection";
+import Join from "./components/Join";
+import SliderApp from "./gallery-components/SliderApp";
+import SlideAppV1 from "./components/SliderAppv1";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const handleLoad = () => setLoading(false);
+
+    // If everything is already loaded (like on fast refresh)
+    if (document.readyState === "complete") {
+      setLoading(false);
+    } else {
+      // Wait until the full window (images, videos, etc.) is loaded
+      window.addEventListener("load", handleLoad);
+    }
+
+    return () => window.removeEventListener("load", handleLoad);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="loading-screen">
+        <div className="spinner"></div>
+        <h2>Loading...</h2>
+      </div>
+    );
+  }
+
   return (
     <>
-      <NavBar></NavBar>
+      <NavBar />
       <section id="home">
         <LandingPage />
       </section>
@@ -27,10 +52,10 @@ function App() {
           marginTop="25%"
         />
       </section>
-      
+
       <VideoSection />
 
-       <section id="services">
+      <section id="services">
         <Text
           highlight="Services"
           title="Your Climbing Experience"
@@ -38,22 +63,24 @@ function App() {
           marginTop="5vh"
         />
       </section>
-      <Icon></Icon>
-      <div style={{ height: "800px", width: "100%",marginTop:"5vh", display: "flex",justifyContent: "center" }}>
-  <Text
-    highlight="Board"
-    title="Our Board Members"
-    marginTop="0px"
-  />
-</div>
-    <section id="location">
-      <Location />
-    </section>
+      <Icon />
+      <div
+        style={{
+          height: "800px",
+          width: "100%",
+          marginTop: "5vh",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <Text highlight="Board" title="Our Board Members" marginTop="0px" />
+      </div>
+      <section id="location">
+        <Location />
+      </section>
 
-  
-
-  
-        <section id="gallery"><Text
+      <section id="gallery">
+        <Text
           highlight="Gallery"
           title="Our Outdoor Adventures"
           description="Where our club has climbed, explored, and enjoyed the great outdoors."
@@ -61,15 +88,14 @@ function App() {
           titleColor="#FFFFFF"
           descColor="#A5ABB6"
         />
-<SliderApp/></section>
-        
+        <SliderApp />
+      </section>
 
-     <section id="join">
-      <Join></Join>
-     </section>
-       
+      <section id="join">
+        <Join />
+      </section>
 
-      <WallWaiver></WallWaiver>
+      <WallWaiver />
     </>
   );
 }

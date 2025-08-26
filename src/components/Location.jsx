@@ -1,11 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import L from "leaflet";
 import iphoneFrame from "../assets/iphone15.png";
 import pin from "../assets/Pin.png";
 import "./Location.css";
-
-const center = [38.9936, -76.9452]; // Leaflet expects [lat, lng]
 
 export default function Location() {
   const containerRef = useRef(null);
@@ -28,13 +24,6 @@ export default function Location() {
 
     return () => observer.disconnect();
   }, []);
-
-  // Custom pin icon using your image
-  const customIcon = L.icon({
-    iconUrl: pin,
-    iconSize: [32, 32],
-    iconAnchor: [16, 32],
-  });
 
   return (
     <div className="location-container" ref={containerRef}>
@@ -61,20 +50,16 @@ export default function Location() {
 
         <div className="phone-wrapper">
           <div className="map-mask">
-            <MapContainer
-              center={center}
-              zoom={17}
-              style={{ width: "100%", height: "98%" }}
-              scrollWheelZoom={false}
-            >
-              <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              />
-              <Marker position={center} icon={customIcon}>
-                <Popup>Eppley Recreation Center</Popup>
-              </Marker>
-            </MapContainer>
+            <iframe
+              title="Eppley Recreation Center Map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3107.502141337264!2d-76.9452!3d38.9936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c69fdb72f229%3A0x1c50f4db7a7f6f0!2sGeary%20F.%20Eppley%20Recreation%20Center!5e0!3m2!1sen!2sus!4v1693135112345!5m2!1sen!2sus"
+              width="100%"
+              height="98%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
 
           <img
