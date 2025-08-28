@@ -10,6 +10,7 @@ import VideoSection from "./components/VideoSection";
 import Join from "./components/Join";
 import SliderApp from "./gallery-components/SliderApp";
 import SlideAppV1 from "./components/SliderAppv1";
+import LeadershipHeading from "./components/Leadership";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -74,6 +75,7 @@ function App() {
         }}
       >
         <Text highlight="Board" title="Our Board Members" marginTop="0px" />
+      <LeadershipHeading/>
       </div>
       <section id="location">
         <Location />
