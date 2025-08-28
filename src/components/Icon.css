@@ -9,6 +9,7 @@
   margin-top: 100px; /* Default margin */
 }
 
+<<<<<<< HEAD
 
 
 /* Mountain positioning */
@@ -65,6 +66,9 @@
 
 /* Heading styling */
 .icon-container h3 {
+=======
+.icon-container h3{
+>>>>>>> 7c269a6 (leadership)
   font-family: "Inter", sans-serif;
   font-weight: bold;
   font-size: 1.2rem;

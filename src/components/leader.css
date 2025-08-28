@@ -1,0 +1,132 @@
+ .box {
+     width: 453px;
+     height: 449px;
+     background-color: #cccccc;
+     border: 1px solid #999999;
+     margin: 0 auto; /* Redundant for horizontal centering */
+     display: flex;
+     margin-top: 100px; /* Valid for vertical spacing */
+     justify-content: center;
+     align-items: center;
+     color: #333;
+     position: relative; /* CRITICAL: Enables positioning for children */
+     z-index: 1;
+ }
+
+ /* The following elements are now positioned relative to the `.box` container */
+ .lastname {
+     position: absolute;
+     top: 350px; 
+     right: -150px; /* Aligns from the right side */
+     color: #FFF;
+     z-index: 2;
+     font-family: 'Inter', Arial;
+     font-size: 2.8em;
+     text-align: right; /* Text grows from right to left */
+     text-shadow: 
+     -1px -1px 0 black,  1px -1px 0 black,  
+     -1px 1px 0 black,  1px 1px 0 black;
+ }
+ .firstname {
+     position: absolute;
+     top: 250px;
+     right: -150px; /* Aligns from the right side */
+     color: #FFF;
+     z-index: 2;
+     font-family: 'Inter', Arial;
+     font-size: 2.8em;
+     text-align: right; /* Text grows from right to left */
+     text-shadow: 
+     -1px -1px 0 black,  1px -1px 0 black,  
+     -1px 1px 0 black,  1px 1px 0 black;
+ }
+
+
+ .title{
+     position: absolute;
+     top: -135px;
+     left: -150px;
+     color: #99F6C1;
+     z-index: 2;
+     font-family: 'Inter', Arial;
+     font-size: 3em;
+     text-shadow: 
+         -1px -1px 0 black,  1px -1px 0 black,  
+         -1px 1px 0 black,  1px 1px 0 black;
+ }
+
+
+ .long-title{
+     position: absolute;
+     line-height: 0.8;
+     top: -170px;
+     left: -150px;
+     color: #99F6C1;
+     z-index: 2;
+     font-family: 'Inter', Arial;
+     font-size: 3em;
+     text-shadow: 
+         -1px -1px 0 black,  1px -1px 0 black,  
+         -1px 1px 0 black,  1px 1px 0 black;
+ }
+ .hobbies { 
+     position: absolute;
+     top: 490px;
+     left: 50px;
+     color: #FFFFFF;
+     z-index: 2;
+     font-family: 'Inter', Arial;
+     font-size: .9em;
+     width: max-content;
+     text-shadow:
+     -1px -1px 0 black,  1px -1px 0 black,  
+     -1px 1px 0 black,  1px 1px 0 black;
+ }
+
+ .arrow-container {
+     display: flex;
+     position: absolute;
+     top: center;
+     left: 400px;
+     align-items: center;
+     justify-content: center;
+     width: 200px;
+     height: 50px;
+   }
+   
+   .white-arrow {
+     /* The core properties to create the arrow shape */
+     width: 15px;
+     height: 15px;
+     border-top: 3px solid white;
+     border-right: 3px solid white;
+     
+     /* Rotation and positioning */
+     position: relative; 
+     transform: rotate(45deg); 
+   }
+   
+
+ .big {
+     position: absolute; 
+     width: 383.18596629661005px;       
+     height: auto;      
+     top: 250px;
+     left: -250px;
+     z-index: 0;          
+     border-radius: 50%;  
+     object-fit: cover;
+     transform: rotate(-14.14deg);
+ }
+
+ .small {
+     position: absolute; 
+     width: 193.44px;       
+     height: auto;      
+     top: -100px;
+     left: 380px;
+     z-index: 0;          
+     border-radius: 50%;  
+     object-fit: cover;
+     transform: rotate(40deg);
+ }
