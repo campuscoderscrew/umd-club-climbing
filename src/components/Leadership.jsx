@@ -41,15 +41,7 @@ export default function LeadershipHeading() {
     <div>
       <div className="box">
         {/* Dynamic background image */}
-        <motion.img 
-          src={currentPerson.image}
-          alt={`${currentPerson.firstname}'s portrait`}
-          className="background-image"
-          key={currentPerson.image}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        />
+     
 
         {/* AnimatePresence for title */}
         <AnimatePresence mode="wait">
