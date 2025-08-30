@@ -1,0 +1,358 @@
+ .box {
+     width: 407.7px;
+  height: 404.1px;
+     background-color: #cccccc;
+     border: 1px solid #999999;
+     margin: 0 auto; /* Redundant for horizontal centering */
+     display: flex;
+     margin-top: 5vh; /* Valid for vertical spacing */
+     justify-content: center;
+     align-items: center;
+     color: #333;
+     position: relative; /* CRITICAL: Enables positioning for children */
+     z-index: 1;
+ }
+
+ /* The following elements are now positioned relative to the `.box` container */
+ .lastname {
+     position: absolute;
+     top: 350px; 
+     right: -150px; /* Aligns from the right side */
+     color: #FFF;
+     z-index: 2;
+     font-family: 'Inter', Arial;
+     font-size: 2.0em;
+     text-align: right; /* Text grows from right to left */
+     text-shadow: 
+     -1px -1px 0 black,  1px -1px 0 black,  
+     -1px 1px 0 black,  1px 1px 0 black;
+ }
+ .firstname {
+     position: absolute;
+     top: 290px;
+     right: -150px; /* Aligns from the right side */
+     color: #FFF;
+     z-index: 2;
+     font-family: 'Inter', Arial;
+     font-size: 2.0em;
+     text-align: right; /* Text grows from right to left */
+     text-shadow: 
+     -1px -1px 0 black,  1px -1px 0 black,  
+     -1px 1px 0 black,  1px 1px 0 black;
+ }
+
+
+ .title{
+     position: absolute;
+     top: -95px;
+     left: -150px;
+     color: #99F6C1;
+     z-index: 2;
+     font-family: 'Inter', Arial;
+     font-size: 2.2em;
+     text-shadow: 
+         -1px -1px 0 black,  1px -1px 0 black,  
+         -1px 1px 0 black,  1px 1px 0 black;
+ }
+
+
+ .long-title{
+     position: absolute;
+     line-height: 0.8;
+     top: -80px;
+     left: -220px;
+     color: #99F6C1;
+     z-index: 2;
+     font-family: 'Inter', Arial;
+     font-size: 2.2em;
+     text-shadow: 
+         -1px -1px 0 black,  1px -1px 0 black,  
+         -1px 1px 0 black,  1px 1px 0 black;
+ }
+ .hobbies { 
+     position: absolute;
+     top: 440px;
+     right:-150px;
+     color: #FFFFFF;
+     z-index: 2;
+     font-family: 'Inter', Arial;
+     font-size: .9em;
+     width: max-content;
+     text-shadow:
+     -1px -1px 0 black,  1px -1px 0 black,  
+     -1px 1px 0 black,  1px 1px 0 black;
+ }
+
+ .arrow-container {
+     display: flex;
+     position: absolute;
+     top: center;
+     left: 400px;
+     align-items: center;
+     justify-content: center;
+     width: 200px;
+     height: 50px;
+   }
+   
+   .white-arrow {
+     /* The core properties to create the arrow shape */
+     width: 15px;
+     height: 15px;
+     border-top: 3px solid white;
+     border-right: 3px solid white;
+     
+     /* Rotation and positioning */
+     position: relative; 
+     transform: rotate(45deg); 
+   }
+   
+
+ .big {
+     position: absolute; 
+     width: 383.18596629661005px;       
+     height: auto;      
+     top: 200px;
+     left: -240px;
+     z-index: 0;          
+     border-radius: 50%;  
+     object-fit: cover;
+     transform: rotate(-14.14deg);
+ }
+
+ .small {
+     position: absolute; 
+     width: 193.44px;       
+     height: auto;      
+     top: -120px;
+     left: 320px;
+     z-index: 0;          
+     border-radius: 50%;  
+     object-fit: cover;
+     transform: rotate(40deg);
+ }
+
+
+ @media(max-width:1120px) {
+    .box{
+        width: 317.1px;
+height: 314.3px;
+
+    }
+    .title{
+        font-size: 1.7em;
+        top: -75px;
+        left: -150px;
+    }
+    .long-title{
+        font-size:1.7em;
+        top:-60px;
+             left: -150px;
+    }
+    .lastname{
+        font-size: 1.56em;
+        top:270px;
+        right: -130px;
+    }
+    .firstname{
+        font-size: 1.56em;
+        top:220px;
+        right: -130px;
+    }
+    .hobbies{
+        font-size: 0.65em;
+        top: 350px;
+        right:-130px
+    }
+    .big{
+        width: 306px;
+        top: 170px;
+     left: -200px;
+    }
+    .small{
+        width: 155px;
+        top: -90px;
+     left: 280px;
+    }
+    .arrow-container{
+        left:300px
+    }
+ }
+
+  @media(max-width:700px) {
+    .box {
+        width: 253.68px;    /* 317.1*0.8 */
+        height: 251.44px;   /* 314.3*0.8 */
+    }
+    .title {
+        font-size: 1.36em;  /* 1.7*0.8 */
+        top: -60px;         /* -75*0.8 */
+        left: -120px;       /* -150*0.8 */
+    }
+    .long-title {
+        font-size: 1.36em;
+        top: -48px;         /* -60*0.8 */
+        left: -120px;
+    }
+    .lastname {
+        font-size: 1.25em;  /* 1.56*0.8 */
+        top: 216px;         /* 270*0.8 */
+        right: -104px;      /* -130*0.8 */
+    }
+    .firstname {
+        font-size: 1.25em;
+        top: 176px;         /* 220*0.8 */
+        right: -104px;
+    }
+    .hobbies {
+        font-size: 0.52em;  /* 0.65*0.8 */
+        top: 280px;         /* 350*0.8 */
+        right: -104px;
+    }
+    .big {
+        width: 244.8px;     /* 306*0.8 */
+        top: 136px;         /* 170*0.8 */
+        left: -160px;       /* -200*0.8 */
+    }
+    .small {
+        width: 124px;       /* 155*0.8 */
+        top: -72px;         /* -90*0.8 */
+        left: 224px;        /* 280*0.8 */
+    }
+    .arrow-container {
+        left: 240px;        /* 300*0.8 */
+    }
+}
+@media(max-width:530px) {
+    .box {
+        width: 221.97px;    /* 317.1*0.7 */
+        height: 219.01px;   /* 314.3*0.7 */
+    }
+    .title {
+        font-size: 1.19em;  /* 1.7*0.7 */
+        top: -52.5px;       /* -75*0.7 */
+        left: -105px;       /* -150*0.7 */
+    }
+    .long-title {
+        font-size: 1.19em;
+        top: -42px;         /* -60*0.7 */
+        left: -105px;
+    }
+    .lastname {
+        font-size: 1.09em;  /* 1.56*0.7 */
+        top: 189px;         /* 270*0.7 */
+        right: -91px;       /* -130*0.7 */
+    }
+    .firstname {
+        font-size: 1.09em;
+        top: 154px;         /* 220*0.7 */
+        right: -91px;
+    }
+    .hobbies {
+        font-size: 0.455em; /* 0.65*0.7 */
+        top: 245px;         /* 350*0.7 */
+        right: -91px;
+    }
+    .big {
+        width: 214.2px;     /* 306*0.7 */
+        top: 119px;         /* 170*0.7 */
+        left: -140px;       /* -200*0.7 */
+    }
+    .small {
+        width: 108.5px;     /* 155*0.7 */
+        top: -63px;         /* -90*0.7 */
+        left: 196px;        /* 280*0.7 */
+    }
+    .arrow-container {
+        left: 210px;        /* 300*0.7 */
+    }
+}
+
+@media(max-width:460px) {
+    .box {
+        width: 190.26px;    /* 317.1*0.6 */
+        height: 188.58px;   /* 314.3*0.6 */
+    }
+    .title {
+        font-size: 1.02em;  /* 1.7*0.6 */
+        top: -45px;         /* -75*0.6 */
+        left: -90px;        /* -150*0.6 */
+    }
+    .long-title {
+        font-size: 1.02em;
+        top: -36px;         /* -60*0.6 */
+        left: -90px;
+    }
+    .lastname {
+        font-size: 0.936em; /* 1.56*0.6 */
+        top: 162px;         /* 270*0.6 */
+        right: -78px;       /* -130*0.6 */
+    }
+    .firstname {
+        font-size: 0.936em;
+        top: 132px;         /* 220*0.6 */
+        right: -78px;
+    }
+    .hobbies {
+        font-size: 0.39em;  /* 0.65*0.6 */
+        top: 210px;         /* 350*0.6 */
+        right: -78px;
+    }
+    .big {
+        width: 183.6px;     /* 306*0.6 */
+        top: 102px;         /* 170*0.6 */
+        left: -120px;       /* -200*0.6 */
+    }
+    .small {
+        width: 93px;        /* 155*0.6 */
+        top: -54px;         /* -90*0.6 */
+        left: 168px;        /* 280*0.6 */
+    }
+    .arrow-container {
+        left: 160px;        /* 300*0.6 */
+    }
+}
+
+@media(max-width:400px) {
+    .box {
+        width: 158.55px;    /* 317.1 * 0.5 */
+        height: 157.15px;   /* 314.3 * 0.5 */
+    }
+    .title {
+        font-size: 0.85em;  /* 1.7 * 0.5 */
+        top: -37.5px;       /* -75 * 0.5 */
+        left: -75px;        /* -150 * 0.5 */
+    }
+    .long-title {
+        font-size: 0.85em;
+        top: -30px;         /* -60 * 0.5 */
+        left: -75px;
+    }
+    .lastname {
+        font-size: 0.78em;  /* 1.56 * 0.5 */
+        top: 135px;         /* 270 * 0.5 */
+        right: -65px;       /* -130 * 0.5 */
+    }
+    .firstname {
+        font-size: 0.78em;
+        top: 110px;         /* 220 * 0.5 */
+        right: -65px;
+    }
+    .hobbies {
+        font-size: 0.325em; /* 0.65 * 0.5 */
+        top: 175px;         /* 350 * 0.5 */
+        right: -65px;
+    }
+    .big {
+        width: 153px;       /* 306 * 0.5 */
+        top: 85px;          /* 170 * 0.5 */
+        left: -100px;       /* -200 * 0.5 */
+    }
+    .small {
+        width: 77.5px;      /* 155 * 0.5 */
+        top: -45px;         /* -90 * 0.5 */
+        left: 140px;        /* 280 * 0.5 */
+    }
+    .arrow-container {
+        left: 120px;        /* 300 * 0.5 */
+    }
+}

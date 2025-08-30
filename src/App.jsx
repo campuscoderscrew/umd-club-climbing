@@ -10,6 +10,7 @@ import VideoSection from "./components/VideoSection";
 import Join from "./components/Join";
 import SliderApp from "./gallery-components/SliderApp";
 import SlideAppV1 from "./components/SliderAppv1";
+import LeadershipHeading from "./components/Leadership";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -64,17 +65,15 @@ function App() {
         />
       </section>
       <Icon />
-      <div
-        style={{
-          height: "800px",
-          width: "100%",
-          marginTop: "5vh",
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <Text highlight="Board" title="Our Board Members" marginTop="0px" />
-      </div>
+      <div style={{ 
+  display: "flex", 
+  flexDirection: "column", 
+  alignItems: "center", 
+  gap: "2rem" 
+}}>
+  <Text highlight="Board" title="Our Board Members" marginTop="0px" />
+  <LeadershipHeading />
+</div>
       <section id="location">
         <Location />
       </section>
@@ -84,7 +83,7 @@ function App() {
           highlight="Gallery"
           title="Our Outdoor Adventures"
           description="Where our club has climbed, explored, and enjoyed the great outdoors."
-          marginTop="5vh"
+          marginTop="20vh"
           titleColor="#FFFFFF"
           descColor="#A5ABB6"
         />
