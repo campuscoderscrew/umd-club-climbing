@@ -11,6 +11,7 @@ import Join from "./components/Join";
 import SliderApp from "./gallery-components/SliderApp";
 import SlideAppV1 from "./components/SliderAppv1";
 import LeadershipHeading from "./components/Leadership";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -58,6 +59,7 @@ function App() {
       <section id="home">
         <LandingPage />
       </section>
+       <ScrollToTopButton />
 
       <section id="about">
         <Text
@@ -119,6 +121,7 @@ function App() {
       </section>
 
       <WallWaiver />
+
     </>
   );
 }
