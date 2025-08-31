@@ -14,19 +14,33 @@ import LeadershipHeading from "./components/Leadership";
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [isNarrow, setIsNarrow] = useState(window.innerWidth <= 887);
 
+  // Handle loading spinner
   useEffect(() => {
     const handleLoad = () => setLoading(false);
 
-    // If everything is already loaded (like on fast refresh)
     if (document.readyState === "complete") {
       setLoading(false);
     } else {
-      // Wait until the full window (images, videos, etc.) is loaded
       window.addEventListener("load", handleLoad);
     }
 
     return () => window.removeEventListener("load", handleLoad);
+  }, []);
+
+  // Track window resize for responsive title color
+  useEffect(() => {
+    const handleResize = () => {
+      setIsNarrow(window.innerWidth <= 887);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Run once on mount to catch any initial width change
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   if (loading) {
@@ -64,16 +78,26 @@ function App() {
           marginTop="5vh"
         />
       </section>
+
       <Icon />
-      <div style={{ 
-  display: "flex", 
-  flexDirection: "column", 
-  alignItems: "center", 
-  gap: "2rem" 
-}}>
-  <Text highlight="Board" title="Our Board Members" marginTop="0px" />
-  <LeadershipHeading />
-</div>
+
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "2rem",
+        }}
+      >
+        <Text
+          highlight="Board"
+          title="Our Board Members"
+          marginTop="0px"
+          titleColor={isNarrow ? "#FFFFFF" : "#000000"}
+        />
+        <LeadershipHeading />
+      </div>
+
       <section id="location">
         <Location />
       </section>
