@@ -88,7 +88,7 @@
   padding: 0.5rem clamp(0.5rem, 0.5vw, 1.5rem);
   color: white;
   font-weight: semibold;
-  font-size: clamp(0.5rem, 2vw, 1rem); /* 👈 shrink text */
+  font-size: clamp(0.8rem, 2vw, 1rem); /* 👈 shrink text */
   cursor: pointer;
   display: inline-flex;
   align-items: center;
