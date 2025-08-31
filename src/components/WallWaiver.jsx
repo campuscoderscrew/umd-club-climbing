@@ -32,10 +32,15 @@ const WallWaiver = () => {
         To be a part of the club and join us for any climbing activities, you must sign the wall waiver.
         It's required for all participants.
       </p>
-      <button className="wall-waiver-button">
+      <a
+        className="wall-waiver-button"
+        href="https://waiver.smartwaiver.com/w/5a709bf63bfd5/web/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <WaiverIcon />
         Sign Waiver
-      </button>
+      </a>
       <p className="wall-waiver-footer">
         © 2025 CCC. Built with React. All rights reserved.
       </p>
