@@ -149,7 +149,13 @@ html, body {
   }
 }
 
-.board{
-  title-color: #FFFFFF;
+#join{
+  margin-top:50vh;
+}
+
+@media(max-width:940px){
+  #join{
+    margin-top:20vh;
+  }
 }
 

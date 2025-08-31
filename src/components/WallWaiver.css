@@ -48,12 +48,12 @@
 .wall-waiver-text {
   font-family: 'Inter', sans-serif;
   font-weight: 300;
-  font-size: clamp(14px, 1.6vw, 18px);
+  font-size: clamp(12px, 1.6vw, 18px);
   line-height: 1.7;
   color: #676D79;
   width: min(600px, 70%);
   margin: 0 auto;
-  padding-top: 2%;
+  padding-top: 4%;
   padding-bottom: 2%;
   text-align: center;
   z-index: 1;
@@ -81,13 +81,14 @@
 
 /* Button styling */
 .wall-waiver-button {
+  margin-top: 10px;
   background-color: #00B19E;
   border: none;
   border-radius: 30px;
   padding: 0.5rem clamp(0.5rem, 0.5vw, 1.5rem);
   color: white;
-  font-weight: bold;
-  font-size: clamp(0.8rem, 2vw, 1rem); /* 👈 shrink text */
+  font-weight: semibold;
+  font-size: clamp(0.5rem, 2vw, 1rem); /* 👈 shrink text */
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -95,6 +96,7 @@
   box-shadow: 0 4px 6px rgba(0, 177, 158, 0.3);
   transition: box-shadow 0.3s ease;
   text-decoration: none;
+  font-family: 'Jakarta', sans-serif;
 }
 
 

@@ -190,27 +190,58 @@ height: 314.3px;
     .title {
         font-size: 1.36em;  /* 1.7*0.8 */
         top: -60px;         /* -75*0.8 */
-        left: -120px;       /* -150*0.8 */
+        left: -120px;  
+      text-shadow:
+  -0.8px -0.8px 0 black,
+   0.8px -0.8px 0 black,
+  -0.8px  0.8px 0 black,
+   0.8px  0.8px 0 black;
+
+        
     }
     .long-title {
         font-size: 1.36em;
         top: -48px;         /* -60*0.8 */
         left: -120px;
+        text-shadow:
+  -0.8px -0.8px 0 black,
+   0.8px -0.8px 0 black,
+  -0.8px  0.8px 0 black,
+   0.8px  0.8px 0 black;
+
     }
     .lastname {
         font-size: 1.25em;  /* 1.56*0.8 */
         top: 216px;         /* 270*0.8 */
-        right: -104px;      /* -130*0.8 */
+        right: -104px;
+        text-shadow:
+  -0.8px -0.8px 0 black,
+   0.8px -0.8px 0 black,
+  -0.8px  0.8px 0 black,
+   0.8px  0.8px 0 black;
+      /* -130*0.8 */
     }
     .firstname {
         font-size: 1.25em;
         top: 176px;         /* 220*0.8 */
         right: -104px;
+        text-shadow:
+  -0.8px -0.8px 0 black,
+   0.8px -0.8px 0 black,
+  -0.8px  0.8px 0 black,
+   0.8px  0.8px 0 black;
+
     }
     .hobbies {
         font-size: 0.52em;  /* 0.65*0.8 */
         top: 280px;         /* 350*0.8 */
         right: -104px;
+        text-shadow:
+  -0.8px -0.8px 0 black,
+   0.8px -0.8px 0 black,
+  -0.8px  0.8px 0 black,
+   0.8px  0.8px 0 black;
+
     }
     .big {
         width: 244.8px;     /* 306*0.8 */
@@ -228,6 +259,7 @@ height: 314.3px;
 }
 @media(max-width:530px) {
     .box {
+        margin-top: -10px;
         width: 221.97px;    /* 317.1*0.7 */
         height: 219.01px;   /* 314.3*0.7 */
     }

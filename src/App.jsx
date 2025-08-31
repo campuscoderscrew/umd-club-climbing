@@ -94,7 +94,7 @@ function App() {
         <Text
           highlight="Board"
           title="Our Board Members"
-          marginTop="0px"
+          marginTop="10vh"
           titleColor={isNarrow ? "#FFFFFF" : "#000000"}
         />
         <LeadershipHeading />
@@ -109,7 +109,7 @@ function App() {
           highlight="Gallery"
           title="Our Outdoor Adventures"
           description="Where our club has climbed, explored, and enjoyed the great outdoors."
-          marginTop="20vh"
+          marginTop="10vh"
           titleColor="#FFFFFF"
           descColor="#A5ABB6"
         />
